@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onda — som ambiente para trabalhar e dormir</title>
+<meta name="description" content="Onda é uma landing page conceitual de app de som ambiente: camadas ajustáveis, timer e modo offline. App fictício, sem download real.">
+<meta name="theme-color" content="#0b1622">
+<link rel="stylesheet" href="../_shared/demo.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="on">
+
+<div class="on-bar">
+  <a href="../../trabalhos.html">← portfólio</a>
+  <span class="dot" aria-hidden="true"></span>
+  <strong>Projeto conceitual</strong>
+  <span class="hint">Onda · landing page de app</span>
+  <a class="spacer" href="../../index.html">Ytalo</a>
+</div>
+
+<header class="on-head">
+  <a class="on-brand" href="index.html">Onda</a>
+  <nav class="on-nav" aria-label="Navegação">
+    <a href="#recursos">Recursos</a>
+    <a href="#mistura">Mistura</a>
+    <a href="#planos">Planos</a>
+    <a href="#duvidas">Dúvidas</a>
+  </nav>
+  <button class="on-menu" type="button" data-menu aria-expanded="false" aria-controls="on-mobile">Menu</button>
+  <a class="on-btn on-btn--accent" href="#baixar">Baixar</a>
+</header>
+<div class="on-mobile" id="on-mobile" data-mobile data-open="false">
+  <a href="#recursos">Recursos</a>
+  <a href="#mistura">Mistura</a>
+  <a href="#planos">Planos</a>
+  <a href="#duvidas">Dúvidas</a>
+  <a href="#baixar">Baixar</a>
+</div>
+
+<main>
+  <section class="on-hero">
+    <p class="on-eyebrow">Foco, sono e respiração</p>
+    <h1>Silêncio é caro.<br><em>Som ambiente</em> não.</h1>
+    <p class="on-lede">Um app para mascarar o barulho que atrapalha: camadas de chuva, vento e ruído que você ajusta com o dedo. Funciona sem internet depois do primeiro download.</p>
+    <div class="on-hero__actions">
+      <a class="on-btn on-btn--accent" href="#baixar">Baixar o app</a>
+      <a class="on-btn" href="#mistura">Testar a mistura</a>
+    </div>
+
+    <div class="on-device" aria-label="Prévia da tela do app">
+      <div class="on-device__bar">
+        <span class="on-mono">onda · sessão 03</span>
+        <span class="on-mono">25:00</span>
+      </div>
+      <div class="on-wave" data-wave aria-hidden="true"></div>
+      <div class="on-tracks">
+        <div class="on-track">
+          <span>chuva fina</span>
+          <span class="on-meter"><i style="width:72%"></i></span>
+          <span class="on-mono">72</span>
+        </div>
+        <div class="on-track">
+          <span>vento baixo</span>
+          <span class="on-meter"><i style="width:38%"></i></span>
+          <span class="on-mono">38</span>
+        </div>
+        <div class="on-track">
+          <span>ruído marrom</span>
+          <span class="on-meter"><i style="width:54%"></i></span>
+          <span class="on-mono">54</span>
+        </div>
+      </div>
+      <p class="on-mono on-device__note">interface ilustrada · o player real está em “Mistura”</p>
+    </div>
+  </section>
+
+  <section class="on-section" id="recursos">
+    <div class="on-section__head">
+      <h2>O que ele faz</h2>
+      <p class="on-mono">quatro coisas, bem feitas</p>
+    </div>
+    <div class="on-features">
+      <article>
+        <div class="on-icon" data-icon="layers" aria-hidden="true"></div>
+        <h3>Seis camadas</h3>
+        <p>Case chuva com vento e ruído branco. Cada camada tem volume próprio e o conjunto pode ser salvo.</p>
+      </article>
+      <article>
+        <div class="on-icon" data-icon="timer" aria-hidden="true"></div>
+        <h3>Timer que fecha o som</h3>
+        <p>O volume cai nos últimos dois minutos, em vez de cortar de uma vez. Dormir no meio é a ideia.</p>
+      </article>
+      <article>
+        <div class="on-icon" data-icon="offline" aria-hidden="true"></div>
+        <h3>Offline de verdade</h3>
+        <p>Os sons ficam no aparelho. No avião, no metrô, no sítio sem sinal — continua tocando.</p>
+      </article>
+      <article>
+        <div class="on-icon" data-icon="quiet" aria-hidden="true"></div>
+        <h3>Sem conta obrigatória</h3>
+        <p>Abre e toca. A conta só serve para levar suas misturas de um aparelho para outro.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="on-section on-mix" id="mistura">
+    <div class="on-section__head">
+      <h2>Misture aqui</h2>
+      <p class="on-mono">demonstração visual</p>
+    </div>
+    <div class="on-mixer">
+      <div class="on-mixer__visual" aria-hidden="true">
+        <div class="on-mixer__blob" data-blob></div>
+        <p class="on-mono" data-mix-label>3 camadas · 0 dB</p>
+      </div>
+      <div class="on-mixer__controls">
+        <label class="on-slider">
+          <span>chuva fina</span>
+          <input type="range" min="0" max="100" value="72" data-layer="chuva" aria-label="Volume de chuva fina">
+          <b data-value="chuva">72</b>
+        </label>
+        <label class="on-slider">
+          <span>vento baixo</span>
+          <input type="range" min="0" max="100" value="38" data-layer="vento" aria-label="Volume de vento baixo">
+          <b data-value="vento">38</b>
+        </label>
+        <label class="on-slider">
+          <span>ruído marrom</span>
+          <input type="range" min="0" max="100" value="54" data-layer="ruido" aria-label="Volume de ruído marrom">
+          <b data-value="ruido">54</b>
+        </label>
+        <p class="on-mono on-mixer__note">Estes controles mudam o desenho e os números. Não há áudio nesta demonstração — a intenção é mostrar o estado da interface.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="on-section" id="planos">
+    <div class="on-section__head">
+      <h2>Planos</h2>
+      <p class="on-mono">valores fictícios</p>
+    </div>
+    <div class="on-plans">
+      <article>
+        <h3>Grátis</h3>
+        <p class="on-price">R$ 0</p>
+        <p class="on-mono">para sempre</p>
+        <ul>
+          <li>6 sons</li>
+          <li>2 camadas ao mesmo tempo</li>
+          <li>Timer de 25 minutos</li>
+        </ul>
+        <a class="on-btn" href="#baixar">Usar grátis</a>
+      </article>
+      <article class="on-plans__main">
+        <h3>Onda completa</h3>
+        <p class="on-price">R$ 89<span>/ano</span></p>
+        <p class="on-mono">ou R$ 9,90 por mês</p>
+        <ul>
+          <li>34 sons, sem limite de camadas</li>
+          <li>Timer longo e despertar suave</li>
+          <li>Sincronizar entre aparelhos</li>
+          <li>Sem anúncio e sem coleta</li>
+        </ul>
+        <a class="on-btn on-btn--accent" href="#baixar">Ver no app</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="on-section" id="duvidas">
+    <div class="on-section__head">
+      <h2>Dúvidas</h2>
+      <p class="on-mono">respostas curtas</p>
+    </div>
+    <div class="on-faq" data-faq>
+      <details>
+        <summary>Precisa de internet?</summary>
+        <p>Só no primeiro download. Depois os sons ficam no aparelho e o app funciona em modo avião.</p>
+      </details>
+      <details>
+        <summary>Consome bateria?</summary>
+        <p>Menos que um player de música: os sons são arquivos em loop decodificados pelo próprio sistema. Em teste interno, 8% em quatro horas de tela apagada.</p>
+      </details>
+      <details>
+        <summary>Dá para usar com fone?</summary>
+        <p>Sim, e o app lembra o volume de cada aparelho. Ao tirar o fone, pausa sozinho.</p>
+      </details>
+      <details>
+        <summary>Como cancelo?</summary>
+        <p>Na tela de plano, em dois toques, sem falar com ninguém. O acesso continua até o fim do período pago.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="on-download" id="baixar">
+    <div>
+      <p class="on-eyebrow">Download</p>
+      <h2>Instale e toque<br>em dez segundos.</h2>
+      <p class="on-lede">O Onda não pede login, cartão nem permissão que não usa. As lojas abaixo são parte do conceito — os links não existem.</p>
+    </div>
+    <ul class="on-stores">
+      <li><span>App Store</span><span class="on-mono">conceito</span></li>
+      <li><span>Google Play</span><span class="on-mono">conceito</span></li>
+      <li><span>Web app</span><span class="on-mono">conceito</span></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="on-foot">
+  <p>Onda · projeto conceitual 2026</p>
+  <p>App fictício · nenhum áudio ou download real</p>
+  <p><a href="../../trabalhos.html">Voltar ao portfólio</a></p>
+</footer>
+
+<script src="../_shared/demo.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

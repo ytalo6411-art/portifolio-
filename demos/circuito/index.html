@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Circuito — operação de lojas em um só painel</title>
+<meta name="description" content="Circuito é um site conceitual de empresa de tecnologia: painel de operação para lojas, com integrações, módulos, segurança e planos. Produto fictício.">
+<meta name="theme-color" content="#0f1424">
+<link rel="stylesheet" href="../_shared/demo.css">
+<link rel="stylesheet" href="../_shared/site.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="site">
+
+<div class="demo-bar">
+  <a href="../../trabalhos.html">← portfólio</a>
+  <span class="dot" aria-hidden="true"></span>
+  <strong>Projeto conceitual</strong>
+  <span class="hint">Circuito · empresa de tecnologia</span>
+  <a class="spacer" href="../../index.html">Ytalo</a>
+</div>
+
+<header class="site-head">
+  <div class="site-wrap site-head__inner">
+    <a class="site-brand" href="index.html"><span class="cr-mark" aria-hidden="true"></span>Circuito</a>
+    <nav class="site-nav" aria-label="Navegação principal">
+      <a href="#produto">Produto</a>
+      <a href="#modulos">Módulos</a>
+      <a href="#seguranca">Segurança</a>
+      <a href="#planos">Planos</a>
+    </nav>
+    <button class="site-menu" type="button" data-menu aria-expanded="false" aria-controls="menu-site">Menu</button>
+    <a class="site-btn site-btn--accent site-head__cta" href="#contato">Testar o painel</a>
+  </div>
+  <div class="site-mobile-nav" id="menu-site" data-mobile data-open="false">
+    <div class="site-wrap">
+      <a href="#produto">Produto</a>
+      <a href="#modulos">Módulos</a>
+      <a href="#seguranca">Segurança</a>
+      <a href="#planos">Planos</a>
+      <a href="#contato">Testar o painel</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="site-wrap site-hero cr-hero">
+    <div class="cr-hero__text">
+      <p class="site-label">Operação de lojas · painel único</p>
+      <h1 class="site-h1">Pedido, estoque e<br>caixa na mesma<br><em>tela</em>.</h1>
+      <p class="site-lede">O Circuito junta o que hoje está espalhado entre planilha, ERP e grupo de WhatsApp. Uma fonte de dado, três perguntas respondidas: vendeu, sobrou, entrou.</p>
+      <div class="site-row">
+        <a class="site-btn site-btn--accent" href="#contato">Começar um teste</a>
+        <a class="site-link" href="#produto">Ver como funciona</a>
+      </div>
+      <p class="site-mono">Produto fictício · dados de demonstração</p>
+    </div>
+    <figure class="site-hero__media cr-diagram">
+      <div class="site-hero__art" data-hero-art></div>
+      <figcaption class="site-caption">
+        <span>loja · estoque · financeiro · fiscal</span>
+        <span>uma sincronização a cada 90 s</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <div class="site-wrap">
+    <div class="site-stats">
+      <div class="site-stat"><p class="site-label">Integrações previstas</p><p class="site-big-number">14</p></div>
+      <div class="site-stat"><p class="site-label">Sincronização</p><p class="site-big-number">90 s</p></div>
+      <div class="site-stat"><p class="site-label">Histórico guardado</p><p class="site-big-number">24 meses</p></div>
+      <div class="site-stat"><p class="site-label">Usuários por conta</p><p class="site-big-number">ilimitado</p></div>
+    </div>
+    <p class="site-mono cr-disclaimer">Números de especificação do produto fictício — não são resultados de clientes.</p>
+  </div>
+
+  <section class="site-wrap site-section" id="produto">
+    <div class="site-section__head">
+      <h2 class="site-h2">O que o painel resolve</h2>
+      <p class="site-label">Três perguntas do dia</p>
+    </div>
+    <ol class="site-steps cr-steps">
+      <li>
+        <span class="site-mono">01 · vendeu?</span>
+        <h3>Vendas por canal</h3>
+        <p>Balcão, site e marketplace somados no mesmo número. Pedido cancelado aparece separado, sem maquiar o total.</p>
+      </li>
+      <li>
+        <span class="site-mono">02 · sobrou?</span>
+        <h3>Estoque que bate</h3>
+        <p>Baixa automática por venda e ajuste manual com histórico. Alerta quando um item fica abaixo do mínimo.</p>
+      </li>
+      <li>
+        <span class="site-mono">03 · entrou?</span>
+        <h3>Caixa do dia</h3>
+        <p>Recebimentos, taxas e prazo de repasse por adquirente. O que vai cair na conta na próxima semana.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="site-wrap site-section" id="modulos">
+    <div class="site-section__head">
+      <h2 class="site-h2">Módulos</h2>
+      <p class="site-label">Liga e desliga</p>
+    </div>
+    <div class="site-grid cr-modules">
+      <article class="site-card">
+        <p class="site-card__num">01</p>
+        <h3>Vendas</h3>
+        <p>Pedidos de todos os canais, com filtro por período, status e forma de pagamento.</p>
+      </article>
+      <article class="site-card">
+        <p class="site-card__num">02</p>
+        <h3>Estoque</h3>
+        <p>Saldo por variação, custo médio e alerta de mínimo. Importa planilha na primeira carga.</p>
+      </article>
+      <article class="site-card">
+        <p class="site-card__num">03</p>
+        <h3>Financeiro</h3>
+        <p>Contas a receber, taxas por meio de pagamento e conciliação do extrato.</p>
+      </article>
+      <article class="site-card">
+        <p class="site-card__num">04</p>
+        <h3>Fiscal</h3>
+        <p>Emissão de nota e conferência de tributos por produto, com regra por estado.</p>
+      </article>
+      <article class="site-card">
+        <p class="site-card__num">05</p>
+        <h3>Equipe</h3>
+        <p>Permissões por função. Quem vende não vê custo; quem compra não vê margem.</p>
+      </article>
+      <article class="site-card">
+        <p class="site-card__num">06</p>
+        <h3>API</h3>
+        <p>Leitura de pedidos e estoque em JSON, com webhook no fechamento do dia.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="site-wrap site-section" id="seguranca">
+    <div class="site-section__head">
+      <h2 class="site-h2">Segurança e dados</h2>
+      <p class="site-label">Regras explícitas</p>
+    </div>
+    <ul class="site-list">
+      <li><span class="site-mono">01</span><strong>Senha e segundo fator</strong><p>Login por senha ou código de seis dígitos. Sessão expira em 12 horas.</p></li>
+      <li><span class="site-mono">02</span><strong>Histórico de alteração</strong><p>Cada ajuste de estoque ou preço guarda quem fez, quando e o valor anterior.</p></li>
+      <li><span class="site-mono">03</span><strong>Exportação sempre livre</strong><p>Seus dados saem em CSV a qualquer momento, sem pedido por e-mail e sem taxa.</p></li>
+      <li><span class="site-mono">04</span><strong>Sem venda de dado</strong><p>Nada é compartilhado com terceiros para publicidade. O produto é pago, não é anúncio.</p></li>
+    </ul>
+  </section>
+
+  <section class="site-wrap site-section" id="planos">
+    <div class="site-section__head">
+      <h2 class="site-h2">Planos</h2>
+      <p class="site-label">Valores fictícios</p>
+    </div>
+    <div class="cr-plans">
+      <article>
+        <p class="site-label">uma loja</p>
+        <h3>Balcão</h3>
+        <p class="cr-price">R$ 129<span>/mês</span></p>
+        <ul>
+          <li>Vendas e estoque</li>
+          <li>2 usuários</li>
+          <li>Histórico de 12 meses</li>
+        </ul>
+        <a class="site-btn" href="#contato">Começar</a>
+      </article>
+      <article class="cr-plans__main">
+        <p class="site-label">até 3 lojas</p>
+        <h3>Rede</h3>
+        <p class="cr-price">R$ 289<span>/mês</span></p>
+        <ul>
+          <li>Todos os módulos</li>
+          <li>Usuários ilimitados</li>
+          <li>Histórico de 24 meses</li>
+          <li>API e webhook</li>
+        </ul>
+        <a class="site-btn site-btn--accent" href="#contato">Testar 14 dias</a>
+      </article>
+      <article>
+        <p class="site-label">acima de 3 lojas</p>
+        <h3>Grupo</h3>
+        <p class="cr-price">Falar</p>
+        <ul>
+          <li>Ambiente dedicado</li>
+          <li>Migração assistida</li>
+          <li>Suporte com SLA</li>
+        </ul>
+        <a class="site-btn" href="#contato">Conversar</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="site-wrap site-section" id="contato">
+    <div class="site-section__head">
+      <h2 class="site-h2">Teste o painel</h2>
+      <p class="site-label">Formulário demonstrativo</p>
+    </div>
+    <div class="site-grid-2">
+      <div class="cr-contact">
+        <p>O teste abre com dados de exemplo de uma loja fictícia — pedidos, estoque e caixa dos últimos 30 dias. Nada é cobrado e não há compromisso.</p>
+        <p class="site-mono">Este site é um projeto conceitual. Não existe produto, cobrança ou suporte real.</p>
+      </div>
+      <form class="site-form" data-demo-form data-success="Campos válidos. Demonstração: nenhum teste foi criado." novalidate>
+        <div class="site-field">
+          <label for="cr-nome">Nome</label>
+          <input id="cr-nome" name="nome" type="text" required minlength="2" autocomplete="name">
+        </div>
+        <div class="site-field">
+          <label for="cr-email">E-mail</label>
+          <input id="cr-email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="site-field">
+          <label for="cr-lojas">Quantas lojas</label>
+          <select id="cr-lojas" name="lojas" required>
+            <option value="">Selecione</option>
+            <option>Uma</option>
+            <option>Duas ou três</option>
+            <option>Mais de três</option>
+          </select>
+        </div>
+        <p class="site-form__status" data-form-status>Demonstração: o formulário valida e não envia.</p>
+        <button class="site-btn site-btn--accent" type="submit">Criar teste</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-wrap site-foot">
+  <p>Circuito · projeto conceitual 2026</p>
+  <p>Produto fictício · sem clientes ou resultados reais</p>
+  <p><a href="../../trabalhos.html">Voltar ao portfólio</a></p>
+</footer>
+
+<script src="../_shared/demo.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

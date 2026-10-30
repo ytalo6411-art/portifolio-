@@ -1,0 +1,128 @@
+/* Estúdio Maru — papel mineral, serifa editorial, desenho técnico. */
+
+:root {
+  --site-bg: #e9e6dc;
+  --site-ink: #22261f;
+  --site-soft: #4d5347;
+  --site-muted: #7c8272;
+  --site-line: rgba(34, 38, 31, 0.22);
+  --site-card: #e2dfd3;
+  --site-art-bg: #dfdccf;
+  --site-accent: #42583f;
+  --site-accent-ink: #f4f2e9;
+  --site-radius: 0;
+  --site-chip-radius: 0;
+  --site-display: var(--demo-serif);
+  --site-gutter: clamp(1rem, 4vw, 2.5rem);
+  --site-max: 76rem;
+  --site-h1: clamp(2.4rem, 1.2rem + 4.6vw, 4.4rem);
+  --site-h1-ls: -0.035em;
+  --site-brand-ls: 0.16em;
+  --site-brand-tt: uppercase;
+  --site-error: #9c3b2c;
+  --site-up: #3f6b4a;
+}
+
+.site-brand {
+  font-size: 0.8125rem;
+  letter-spacing: 0.18em;
+}
+
+.site-head {
+  background: rgba(233, 230, 220, 0.94);
+  backdrop-filter: blur(4px);
+}
+
+.site-h1 em {
+  font-style: italic;
+}
+
+.mr-hero__text {
+  display: grid;
+  gap: 1rem;
+  align-content: end;
+}
+
+.site-hero__art {
+  background: #dfdccf;
+}
+
+.site-hero__art svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* números */
+
+.site-stats {
+  margin-top: clamp(1rem, 3vw, 2rem);
+}
+
+/* galeria: cada peça tem desenho próprio */
+
+.site-tile__art {
+  background: #e3e0d4;
+  border-color: var(--site-line);
+}
+
+.site-tile__art svg {
+  width: 100%;
+  height: 100%;
+}
+
+.site-tile h3 {
+  font-size: 1.05rem;
+}
+
+/* texto corrido */
+
+.mr-prose {
+  display: grid;
+  gap: 0.85rem;
+  font-size: 0.9688rem;
+  line-height: 1.75;
+  color: var(--site-soft);
+  max-width: 58ch;
+}
+
+.mr-facts {
+  border-top: 1px solid var(--site-line);
+}
+
+.mr-facts div {
+  padding: 0.6rem 0;
+}
+
+/* etapas: numeradas em coluna, não em cartão */
+
+.site-steps li {
+  border-top-color: var(--site-line);
+}
+
+.site-steps h3 {
+  font-size: 1.15rem;
+}
+
+.mr-dialog__text {
+  line-height: 1.75;
+  color: var(--site-soft);
+  margin-bottom: 1rem;
+  font-size: 0.9688rem;
+}
+
+/* diálogo de projeto */
+
+.site-dialog__frame {
+  background: #eeebe1;
+}
+
+.site-dialog__art {
+  background: #e3e0d4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-tile:hover .site-tile__art svg {
+    transform: none;
+  }
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contato — Ytalo</title>
+<meta name="description" content="Fale com Ytalo: estágio, projeto, revisão de interface ou uma conversa sobre front-end. Formulário demonstrativo, sem envio real.">
+<link rel="canonical" href="https://ytalo6411-art.github.io/portifolio-/contato.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contato — Ytalo">
+<meta property="og:description" content="Estágio, projeto ou conversa sobre interface. Resposta em até dois dias.">
+<meta property="og:image" content="assets/img/og.png">
+<meta name="theme-color" content="#f2efe8">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/fraunces-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-sans-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <a class="brand" href="index.html">Ytalo<sup>2026</sup></a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="trabalhos.html">Trabalhos</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html" aria-current="page">Contato</a>
+    </nav>
+    <p class="nav__status">Disponível para estágio</p>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" data-menu-toggle>Menu</button>
+  </div>
+  <div class="mobile-nav" id="menu-mobile" data-mobile-nav data-open="false">
+    <nav class="shell" aria-label="Navegação principal (mobile)">
+      <ul>
+        <li><a href="trabalhos.html">Trabalhos <span>15 projetos</span></a></li>
+        <li><a href="sobre.html">Sobre <span>perfil</span></a></li>
+        <li><a href="contato.html">Contato <span>falar comigo</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <section class="shell page-head">
+    <p class="label">Contato</p>
+    <h1 class="h1 page-head__title" style="margin-top:.6rem">Escreve<br>que eu respondo.</h1>
+    <p class="lede" style="margin-top:1.25rem;max-width:44ch">Estágio, projeto pequeno, revisão de interface ou dúvida sobre algum dos projetos. Respondo em até dois dias.</p>
+  </section>
+
+  <section class="shell section" aria-labelledby="h-form">
+    <div class="about">
+      <div>
+        <h2 id="h-form" class="label" style="font-size:.625rem">Como prefere</h2>
+        <a class="contact__mail" href="mailto:seu.email@exemplo.com">seu.email@exemplo.com</a>
+        <p class="label" style="margin-top:.9rem;line-height:1.6">Endereço de exemplo — troque no HTML antes de publicar. É o único dado de contato do site.</p>
+
+        <dl class="facts" style="margin-top:2rem">
+          <div><dt>Onde</dt><dd>Campinas, SP</dd></div>
+          <div><dt>Fuso</dt><dd>UTC−3</dd></div>
+          <div><dt>Resposta</dt><dd>até 2 dias úteis</dd></div>
+          <div><dt>Aberto a</dt><dd>estágio · freelance pequeno</dd></div>
+        </dl>
+
+        <div class="contact__links" style="margin-top:2rem">
+          <a class="link-line" href="https://github.com/ytalo6411-art" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a class="link-line" href="https://github.com/ytalo6411-art/portifolio-" target="_blank" rel="noopener noreferrer">Código deste site ↗</a>
+          <a class="link-line" href="trabalhos.html">Projetos →</a>
+        </div>
+      </div>
+
+      <div>
+        <form class="form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="c-nome">Nome</label>
+            <input id="c-nome" name="nome" type="text" required minlength="2" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="c-email">E-mail</label>
+            <input id="c-email" name="email" type="email" required autocomplete="email">
+            <p class="field__hint">Onde devo responder.</p>
+          </div>
+          <div class="field">
+            <label for="c-assunto">Assunto</label>
+            <select id="c-assunto" name="assunto" required>
+              <option value="">Selecione</option>
+              <option>Vaga de estágio</option>
+              <option>Projeto pequeno</option>
+              <option>Revisão de interface</option>
+              <option>Conversa sobre algum projeto</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="c-mensagem">Mensagem</label>
+            <textarea id="c-mensagem" name="mensagem" required minlength="20" placeholder="Conte em poucas linhas o que você tem em mente."></textarea>
+          </div>
+          <p class="form__status" data-form-status role="status">Formulário demonstrativo: valida os campos e não envia mensagem.</p>
+          <div class="form__actions">
+            <button class="btn btn--solid" type="submit">Enviar mensagem<span> →</span></button>
+            <p class="form__note">Não há servidor aqui. Para falar de verdade, use o e-mail acima.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="shell section" aria-labelledby="h-perguntas">
+    <div class="section-head">
+      <h2 id="h-perguntas">Antes de escrever</h2>
+      <p class="label">Três respostas</p>
+    </div>
+    <ul class="principles">
+      <li><strong>Você é agência?</strong><span>Não. Sou uma pessoa, estudando e construindo sozinho. Por isso digo com clareza o que sei e o que ainda estou aprendendo.</span></li>
+      <li><strong>Faz projeto de graça?</strong><span>Não. Projetos pequenos, escopo combinado por escrito, valor antes de começar. Estágio é outra conversa.</span></li>
+      <li><strong>Quais projetos são reais?</strong><span>Nenhum dos quinze é cliente. São conceitos feitos para praticar — e funcionam de verdade dentro do que se propõem.</span></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell site-footer__inner">
+    <p>© <span data-year>2026</span> Ytalo. Feito à mão, em HTML e CSS.</p>
+    <p>Todos os projetos deste site são conceituais — nenhum cliente real.</p>
+    <p><a href="trabalhos.html">Trabalhos</a> · <a href="sobre.html">Sobre</a> · <a href="contato.html">Contato</a></p>
+  </div>
+</footer>
+
+<script src="assets/js/projects.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  (function () {
+    var form = document.getElementById("contact-form");
+    if (!form) return;
+    var status = form.querySelector("[data-form-status]");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      form.classList.add("is-checked");
+
+      if (!form.checkValidity()) {
+        if (status) {
+          status.setAttribute("data-state", "error");
+          status.textContent = "Faltou preencher algum campo — os destaques mostram onde.";
+        }
+        var invalid = form.querySelector(":invalid");
+        if (invalid) invalid.focus();
+        return;
+      }
+
+      if (status) {
+        status.setAttribute("data-state", "ok");
+        status.textContent = "Tudo preenchido. Como este formulário é demonstrativo, nada foi enviado — use o e-mail ao lado.";
+      }
+      form.reset();
+      form.classList.remove("is-checked");
+    });
+  })();
+</script>
+</body>
+</html>

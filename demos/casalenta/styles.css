@@ -1,0 +1,298 @@
+/* Casa Lenta — areia, madeira, serifa calma. */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("../../assets/fonts/fraunces-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../../assets/fonts/fraunces-italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("../../assets/fonts/instrument-sans-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Plex Mono";
+  src: url("../../assets/fonts/plex-mono-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --shop-bg: #f4efe6;
+  --shop-ink: #2c2a24;
+  --shop-soft: #554f44;
+  --shop-muted: #8b8472;
+  --shop-line: rgba(44, 42, 36, 0.16);
+  --shop-art-bg: #e6dfd0;
+  --shop-accent: #9a6b43;
+  --shop-accent-ink: #fdfaf3;
+  --shop-focus: #9a6b43;
+  --shop-radius: 0.15rem;
+  --shop-chip-radius: 999px;
+  --shop-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --shop-body: "Instrument Sans", system-ui, sans-serif;
+  --shop-display: "Fraunces", Georgia, serif;
+  --shop-display-ls: -0.025em;
+  --shop-mono: "Plex Mono", ui-monospace, monospace;
+  --shop-max: 76rem;
+  --shop-gutter: clamp(1rem, 3.5vw, 2.5rem);
+  --shop-bar-bg: #2c2a24;
+  --shop-bar-ink: #f4efe6;
+  --shop-brand-ls: 0.01em;
+}
+
+.shop-brand {
+  font-size: 1.2rem;
+  letter-spacing: 0.01em;
+}
+
+.shop-head {
+  background: rgba(244, 239, 230, 0.93);
+  backdrop-filter: blur(5px);
+}
+
+.shop-display em {
+  font-style: italic;
+  color: var(--shop-accent);
+}
+
+.shop-chip {
+  border-radius: 999px;
+  padding-inline: 0.9em;
+}
+
+.shop-card__media {
+  background: var(--shop-art-bg);
+  border: 0;
+}
+
+.shop-card__name {
+  font-family: var(--shop-display);
+  font-size: 1.05rem;
+}
+
+.shop-card {
+  gap: 0.5rem;
+}
+
+/* abertura */
+
+.cl-hero {
+  padding-block: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 2vw, 1.75rem);
+  display: grid;
+  gap: 0.9rem;
+  justify-items: start;
+  max-width: none;
+}
+
+.cl-hero__title {
+  font-size: clamp(2.2rem, 1.2rem + 4vw, 4.1rem);
+  max-width: 18ch;
+}
+
+.cl-hero .shop-lede {
+  max-width: 42ch;
+}
+
+.cl-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  margin-top: 0.4rem;
+}
+
+.cl-figure {
+  background: var(--shop-art-bg);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  margin-block: 0 clamp(0.6rem, 1.5vw, 1rem);
+}
+
+.cl-figure svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.cl-caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  font-family: var(--shop-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--shop-muted);
+  padding-bottom: 1.5rem;
+}
+
+/* ambientes */
+
+.cl-rooms {
+  display: grid;
+  gap: clamp(1rem, 2.5vw, 2rem);
+}
+
+@media (min-width: 52rem) {
+  .cl-rooms {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.cl-room {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.cl-room__art {
+  display: block;
+  background: var(--shop-art-bg);
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.cl-room__art svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.6s var(--shop-ease);
+}
+
+.cl-room:hover .cl-room__art svg {
+  transform: scale(1.015);
+}
+
+.cl-room__body {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.cl-room__name {
+  font-family: var(--shop-display);
+  font-size: clamp(1.2rem, 1rem + 1vw, 1.6rem);
+  letter-spacing: -0.02em;
+}
+
+.cl-room__note {
+  font-size: 0.9375rem;
+  color: var(--shop-soft);
+  max-width: 40ch;
+}
+
+/* oficina */
+
+.cl-story {
+  display: grid;
+  gap: clamp(1.25rem, 4vw, 3rem);
+  padding-top: 1rem;
+  border-top: 1px solid var(--shop-line);
+}
+
+@media (min-width: 52rem) {
+  .cl-story {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: start;
+  }
+}
+
+.cl-story__text {
+  display: grid;
+  gap: 0.9rem;
+  font-size: 0.9688rem;
+  line-height: 1.75;
+  color: var(--shop-soft);
+  max-width: 54ch;
+}
+
+.cl-list {
+  display: grid;
+  gap: 0.4rem;
+  padding-top: 0.5rem;
+  font-family: var(--shop-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  color: var(--shop-muted);
+}
+
+.cl-list li::before {
+  content: "— ";
+  color: var(--shop-accent);
+}
+
+/* catálogo */
+
+.shop-filters {
+  border-top: 1px solid var(--shop-line);
+}
+
+.shop-search {
+  border-radius: 999px;
+  padding-inline: 1rem;
+}
+
+.shop-select {
+  border-radius: 999px;
+  background: var(--shop-bg);
+  padding-inline: 0.9rem;
+}
+
+.shop-select-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cl-crumb {
+  padding-top: 1.25rem;
+  font-family: var(--shop-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--shop-muted);
+}
+
+.cl-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  margin-top: 0.3rem;
+}
+
+.cl-note {
+  font-family: var(--shop-mono);
+  font-size: 0.625rem;
+  line-height: 1.75;
+  letter-spacing: 0.03em;
+  color: var(--shop-muted);
+  max-width: 46ch;
+}
+
+.shop-pdp__media {
+  background: var(--shop-art-bg);
+  border: 0;
+}
+
+.shop-btn {
+  border-radius: 999px;
+  padding-inline: 1.5em;
+}
+
+.shop-drawer__close {
+  border-radius: 999px;
+}
+
+.shop-drawer {
+  border-left-color: var(--shop-line);
+}

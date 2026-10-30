@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farol — painel financeiro</title>
+<meta name="description" content="Farol é um painel financeiro conceitual: fluxo de caixa, lançamentos filtráveis, orçamento por centro de custo e formulário de entrada. Dados fictícios.">
+<meta name="theme-color" content="#f5f3ec">
+<link rel="stylesheet" href="../_shared/demo.css">
+<link rel="stylesheet" href="../_shared/system.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="sys fl">
+
+<div class="demo-bar">
+  <a href="../../trabalhos.html">← portfólio</a>
+  <span class="dot" aria-hidden="true"></span>
+  <strong>Projeto conceitual</strong>
+  <span class="hint">Farol · painel financeiro</span>
+  <a class="spacer" href="../../index.html">Ytalo</a>
+</div>
+
+<div class="sys-shell">
+  <aside class="sys-side" aria-label="Navegação do painel">
+    <a class="sys-brand" href="#visao">
+      <span aria-hidden="true"></span>
+      Farol
+    </a>
+
+    <nav class="sys-nav" aria-label="Visões">
+      <button type="button" data-view-link="visao" data-label="Visão geral" data-sub="Fluxo de caixa · setembro">
+        Visão geral
+      </button>
+      <button type="button" data-view-link="lancamentos" data-label="Lançamentos" data-sub="87 registros no período">
+        Lançamentos <span class="sys-count">87</span>
+      </button>
+      <button type="button" data-view-link="orcamento" data-label="Orçamento" data-sub="Centros de custo · limites do trimestre">
+        Orçamento <span class="sys-count">6</span>
+      </button>
+      <button type="button" data-view-link="novo" data-label="Novo lançamento" data-sub="Formulário de demonstração">
+        Novo lançamento
+      </button>
+    </nav>
+
+    <div class="sys-user">
+      <span class="sys-avatar" aria-hidden="true">AM</span>
+      <div>
+        <p class="sys-user__name">Ana Marques</p>
+        <p class="sys-user__role">financeiro · demo</p>
+      </div>
+    </div>
+
+    <p class="sys-note">Números fictícios, criados para demonstrar a interface. Nada aqui vem de uma empresa real.</p>
+  </aside>
+
+  <main class="sys-main">
+    <div class="sys-top">
+      <div>
+        <h1 data-view-title>Visão geral</h1>
+        <p class="sys-top__sub" data-view-sub>Fluxo de caixa · setembro</p>
+      </div>
+      <div class="sys-top__tools">
+        <label class="sys-search">
+          <span class="sys-label">busca</span>
+          <input type="search" placeholder="lançamento, categoria…" data-table-search aria-label="Buscar lançamento">
+        </label>
+        <button class="sys-btn" type="button" data-view-link="novo" data-label="Novo lançamento" data-sub="Formulário de demonstração">+ lançamento</button>
+      </div>
+    </div>
+
+    <!-- visão geral -->
+    <section class="sys-view" data-view="visao">
+      <div class="sys-grid">
+        <article class="sys-card">
+          <p class="sys-label">receita do mês</p>
+          <p class="sys-metric__value">R$ 184.320</p>
+          <p class="sys-metric__delta" data-dir="up">+8,4% sobre agosto</p>
+        </article>
+        <article class="sys-card">
+          <p class="sys-label">despesa do mês</p>
+          <p class="sys-metric__value">R$ 121.900</p>
+          <p class="sys-metric__delta" data-dir="down">+2,1% sobre agosto</p>
+        </article>
+        <article class="sys-card">
+          <p class="sys-label">resultado</p>
+          <p class="sys-metric__value">R$ 62.420</p>
+          <p class="sys-metric__delta" data-dir="up">margem de 33,9%</p>
+        </article>
+        <article class="sys-card">
+          <p class="sys-label">a receber em 30 dias</p>
+          <p class="sys-metric__value">R$ 41.780</p>
+          <p class="sys-metric__delta" data-dir="up">12 títulos</p>
+        </article>
+      </div>
+
+      <div class="sys-grid">
+        <article class="sys-card sys-card--wide">
+          <div class="sys-card__head">
+            <h2>Receita por mês</h2>
+            <span class="sys-label">em milhares de reais</span>
+          </div>
+          <div class="sys-chart" data-chart data-values="96,104,98,118,133,126,142,151,168,171,176,184" data-labels="out,nov,dez,jan,fev,mar,abr,mai,jun,jul,ago,set" data-unit=" mil" role="img" aria-label="Receita mensal crescente, de 96 mil em outubro a 184 mil em setembro"></div>
+          <div class="sys-axis" data-chart-axis></div>
+        </article>
+      </div>
+
+      <div class="sys-grid">
+        <article class="sys-card">
+          <div class="sys-card__head">
+            <h2>Maiores despesas</h2>
+            <span class="sys-label">setembro</span>
+          </div>
+          <ul class="fl-list">
+            <li><span>Folha de pagamento</span><b>R$ 54.200</b></li>
+            <li><span>Fornecedores</span><b>R$ 31.480</b></li>
+            <li><span>Aluguel e condomínio</span><b>R$ 12.600</b></li>
+            <li><span>Software e assinaturas</span><b>R$ 8.340</b></li>
+            <li><span>Impostos</span><b>R$ 15.280</b></li>
+          </ul>
+        </article>
+        <article class="sys-card">
+          <div class="sys-card__head">
+            <h2>Pendências</h2>
+            <span class="sys-label">próximos 7 dias</span>
+          </div>
+          <ul class="sys-timeline">
+            <li><time datetime="2026-10-02">02 out</time>Nota fiscal 4471 · R$ 6.240</li>
+            <li><time datetime="2026-10-03">03 out</time>Repasse de folha · R$ 54.200</li>
+            <li><time datetime="2026-10-05">05 out</time>Fornecedor Norte · R$ 9.180</li>
+            <li><time datetime="2026-10-07">07 out</time>DARF mensal · R$ 4.870</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- lançamentos -->
+    <section class="sys-view" data-view="lancamentos" hidden>
+      <div class="sys-toolbar">
+        <button class="sys-chip" type="button" data-status-filter="todos" aria-pressed="true">todos</button>
+        <button class="sys-chip" type="button" data-status-filter="pago" aria-pressed="false">pago</button>
+        <button class="sys-chip" type="button" data-status-filter="aberto" aria-pressed="false">aberto</button>
+        <button class="sys-chip" type="button" data-status-filter="atrasado" aria-pressed="false">atrasado</button>
+        <span class="sys-count-label" data-table-count>—</span>
+      </div>
+
+      <div class="sys-table-wrap">
+        <table class="sys-table" data-sortable-table data-filter-table>
+          <caption>Lançamentos do trimestre · dados fictícios; clique no cabeçalho para ordenar</caption>
+          <thead>
+            <tr>
+              <th scope="col" data-sortable="data">data</th>
+              <th scope="col" data-sortable="descricao">descrição</th>
+              <th scope="col" data-sortable="categoria">categoria</th>
+              <th scope="col" data-sortable="status">status</th>
+              <th scope="col" class="num" data-sortable="valor">valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="pago">
+              <td data-value="2026-09-28">28 set 2026</td>
+              <td><button class="sys-link" type="button" data-drawer-open data-title="Nota fiscal 4471" data-fact-emissor="Fornecedor Norte" data-fact-categoria="Fornecedores" data-fact-vencimento="28 set 2026" data-fact-valor="R$ 9.180,00" data-state="ok" data-status-label="pago">Nota fiscal 4471</button></td>
+              <td>Fornecedores</td>
+              <td><span class="sys-badge" data-state="ok">pago</span></td>
+              <td class="num" data-value="9180">R$ 9.180</td>
+            </tr>
+            <tr data-status="aberto">
+              <td data-value="2026-09-30">30 set 2026</td>
+              <td><button class="sys-link" type="button" data-drawer-open data-title="Assinatura de software" data-fact-emissor="Quatro Sistemas" data-fact-categoria="Software" data-fact-vencimento="30 set 2026" data-fact-valor="R$ 1.240,00" data-state="warn" data-status-label="aberto">Assinatura de software</button></td>
+              <td>Software</td>
+              <td><span class="sys-badge" data-state="warn">aberto</span></td>
+              <td class="num" data-value="1240">R$ 1.240</td>
+            </tr>
+            <tr data-status="pago">
+              <td data-value="2026-09-25">25 set 2026</td>
+              <td><button class="sys-link" type="button" data-drawer-open data-title="Contrato Aurora" data-fact-emissor="Aurora Engenharia" data-fact-categoria="Receita" data-fact-vencimento="25 set 2026" data-fact-valor="R$ 42.000,00" data-state="ok" data-status-label="pago">Contrato Aurora</button></td>
+              <td>Receita</td>
+              <td><span class="sys-badge" data-state="ok">pago</span></td>
+              <td class="num" data-value="42000">R$ 42.000</td>
+            </tr>
+            <tr data-status="atrasado">
+              <td data-value="2026-09-14">14 set 2026</td>
+              <td><button class="sys-link" type="button" data-drawer-open data-title="Frete e logística" data-fact-emissor="Rota Sul" data-fact-categoria="Logística" data-fact-vencimento="14 set 2026" data-fact-valor="R$ 3.460,00" data-state="bad" data-status-label="atrasado">Frete e logística</button></td>
+              <td>Logística</td>
+              <td><span class="sys-badge" data-state="bad">atrasado</span></td>
+              <td class="num" data-value="3460">R$ 3.460</td>
+            </tr>
+            <tr data-status="aberto">
+              <td data-value="2026-10-02">02 out 2026</td>
+              <td><button class="sys-link" type="button" data-drawer-open data-title="Repasse de folha" data-fact-emissor="Folha interna" data-fact-categoria="Pessoal" data-fact-vencimento="02 out 2026" data-fact-valor="R$ 54.200,00" data-state="warn" data-status-label="aberto">Repasse de folha</button></td>
+              <td>Pessoal</td>
+              <td><span class="sys-badge" data-state="warn">aberto</span></td>
+              <td class="num" data-value="54200">R$ 54.200</td>
+            </tr>
+            <tr data-status="pago">
+              <td data-value="2026-09-18">18 set 2026</td>
+              <td><button class="sys-link" type="button" data-drawer-open data-title="Projeto Mirante" data-fact-emissor="Mirante Arquitetura" data-fact-categoria="Receita" data-fact-vencimento="18 set 2026" data-fact-valor="R$ 28.500,00" data-state="ok" data-status-label="pago">Projeto Mirante</button></td>
+              <td>Receita</td>
+              <td><span class="sys-badge" data-state="ok">pago</span></td>
+              <td class="num" data-value="28500">R$ 28.500</td>
+            </tr>
+            <tr data-status="atrasado">
+              <td data-value="2026-09-09">09 set 2026</td>
+              <td><button class="sys-link" type="button" data-drawer-open data-title="Energia elétrica" data-fact-emissor="Concessionária" data-fact-categoria="Estrutura" data-fact-vencimento="09 set 2026" data-fact-valor="R$ 2.190,00" data-state="bad" data-status-label="atrasado">Energia elétrica</button></td>
+              <td>Estrutura</td>
+              <td><span class="sys-badge" data-state="bad">atrasado</span></td>
+              <td class="num" data-value="2190">R$ 2.190</td>
+            </tr>
+            <tr data-status="pago">
+              <td data-value="2026-09-05">05 set 2026</td>
+              <td><button class="sys-link" type="button" data-drawer-open data-title="Consultoria de processo" data-fact-emissor="Linha Base" data-fact-categoria="Receita" data-fact-vencimento="05 set 2026" data-fact-valor="R$ 16.800,00" data-state="ok" data-status-label="pago">Consultoria de processo</button></td>
+              <td>Receita</td>
+              <td><span class="sys-badge" data-state="ok">pago</span></td>
+              <td class="num" data-value="16800">R$ 16.800</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sys-note" data-table-empty hidden>Nenhum lançamento encontrado com esse filtro.</p>
+    </section>
+
+    <!-- orçamento -->
+    <section class="sys-view" data-view="orcamento" hidden>
+      <div class="sys-grid">
+        <article class="sys-card">
+          <p class="sys-label">pessoal</p>
+          <p class="sys-metric__value">82%</p>
+          <p class="sys-note">R$ 54.200 de R$ 66.000</p>
+          <div class="fl-bar"><span style="width:82%"></span></div>
+        </article>
+        <article class="sys-card">
+          <p class="sys-label">fornecedores</p>
+          <p class="sys-metric__value">64%</p>
+          <p class="sys-note">R$ 31.480 de R$ 48.000</p>
+          <div class="fl-bar"><span style="width:64%"></span></div>
+        </article>
+        <article class="sys-card">
+          <p class="sys-label">estrutura</p>
+          <p class="sys-metric__value">71%</p>
+          <p class="sys-note">R$ 14.790 de R$ 20.800</p>
+          <div class="fl-bar"><span style="width:71%"></span></div>
+        </article>
+        <article class="sys-card">
+          <p class="sys-label">software</p>
+          <p class="sys-metric__value">38%</p>
+          <p class="sys-note">R$ 8.340 de R$ 22.000</p>
+          <div class="fl-bar"><span style="width:38%"></span></div>
+        </article>
+      </div>
+
+      <article class="sys-card">
+        <div class="sys-card__head">
+          <h2>Saldo por centro de custo</h2>
+          <span class="sys-label">previsto − realizado</span>
+        </div>
+        <div class="sys-table-wrap" style="border:0">
+          <table class="sys-table">
+            <caption>Centros de custo do trimestre · valores fictícios</caption>
+            <thead>
+              <tr>
+                <th scope="col">centro</th>
+                <th scope="col" class="num">previsto</th>
+                <th scope="col" class="num">realizado</th>
+                <th scope="col" class="num">saldo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Pessoal</td><td class="num">R$ 66.000</td><td class="num">R$ 54.200</td><td class="num">R$ 11.800</td></tr>
+              <tr><td>Fornecedores</td><td class="num">R$ 48.000</td><td class="num">R$ 31.480</td><td class="num">R$ 16.520</td></tr>
+              <tr><td>Estrutura</td><td class="num">R$ 20.800</td><td class="num">R$ 14.790</td><td class="num">R$ 6.010</td></tr>
+              <tr><td>Software</td><td class="num">R$ 22.000</td><td class="num">R$ 8.340</td><td class="num">R$ 13.660</td></tr>
+              <tr><td>Marketing</td><td class="num">R$ 12.000</td><td class="num">R$ 9.870</td><td class="num">R$ 2.130</td></tr>
+              <tr><td>Logística</td><td class="num">R$ 8.000</td><td class="num">R$ 3.460</td><td class="num">R$ 4.540</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <!-- novo lançamento -->
+    <section class="sys-view" data-view="novo" hidden>
+      <div class="sys-grid">
+        <article class="sys-card sys-card--wide">
+          <div class="sys-card__head">
+            <h2>Registrar lançamento</h2>
+            <span class="sys-label">demonstração</span>
+          </div>
+          <form class="sys-form" data-demo-form data-success="Lançamento registrado nesta demonstração. Nada foi enviado a um servidor.">
+            <div class="sys-form__row">
+              <div class="sys-field">
+                <label for="fl-desc">descrição</label>
+                <input id="fl-desc" name="descricao" required placeholder="Ex.: nota fiscal 4480">
+              </div>
+              <div class="sys-field">
+                <label for="fl-valor">valor</label>
+                <input id="fl-valor" name="valor" required inputmode="decimal" placeholder="1.240,00">
+              </div>
+            </div>
+            <div class="sys-form__row">
+              <div class="sys-field">
+                <label for="fl-cat">categoria</label>
+                <select id="fl-cat" name="categoria" required>
+                  <option value="">selecione</option>
+                  <option>Receita</option>
+                  <option>Fornecedores</option>
+                  <option>Pessoal</option>
+                  <option>Estrutura</option>
+                  <option>Software</option>
+                </select>
+              </div>
+              <div class="sys-field">
+                <label for="fl-data">data</label>
+                <input id="fl-data" name="data" type="date" required>
+              </div>
+            </div>
+            <button class="sys-btn sys-btn--primary" type="submit">Registrar</button>
+            <p class="sys-form__status" data-form-status role="status" aria-live="polite"></p>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="sys-scrim" data-drawer-scrim data-open="false"></div>
+<aside class="sys-drawer" data-drawer data-open="false" aria-hidden="true" aria-label="Detalhe do lançamento">
+  <div class="sys-drawer__head">
+    <div>
+      <h2 data-drawer-title>Detalhe</h2>
+      <span class="sys-badge" data-drawer-status data-state="neutral">—</span>
+    </div>
+    <button class="sys-drawer__close" type="button" data-drawer-close aria-label="Fechar detalhe">×</button>
+  </div>
+  <div class="sys-drawer__body">
+    <dl class="sys-dl" data-drawer-facts></dl>
+    <p class="sys-note">Os dados deste painel são fictícios e servem apenas para demonstrar estados de interface.</p>
+  </div>
+</aside>
+
+<script src="../_shared/system.js"></script>
+<script src="../_shared/demo.js"></script>
+</body>
+</html>

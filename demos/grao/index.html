@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grão — assinatura de café, sem escolher sozinho</title>
+<meta name="description" content="Grão é uma landing page conceitual de assinatura de café: curadoria por perfil, planos mensais e pausa quando quiser. Marca fictícia.">
+<meta name="theme-color" content="#f6f1e6">
+<link rel="stylesheet" href="../_shared/demo.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="gr">
+
+<div class="gr-bar">
+  <a href="../../trabalhos.html">← portfólio</a>
+  <span class="dot" aria-hidden="true"></span>
+  <strong>Projeto conceitual</strong>
+  <span class="hint">Grão · landing page</span>
+  <a class="spacer" href="../../index.html">Ytalo</a>
+</div>
+
+<header class="gr-head">
+  <a class="gr-brand" href="#topo">Grão<span>.</span></a>
+  <nav class="gr-nav" aria-label="Navegação">
+    <a href="#como">Como funciona</a>
+    <a href="#planos">Planos</a>
+    <a href="#duvidas">Dúvidas</a>
+  </nav>
+  <button class="gr-menu" type="button" data-menu aria-expanded="false" aria-controls="gr-mobile">Menu</button>
+  <a class="gr-btn gr-btn--dark" href="#planos">Assinar</a>
+</header>
+<div class="gr-mobile" id="gr-mobile" data-mobile data-open="false">
+  <a href="#como">Como funciona</a>
+  <a href="#planos">Planos</a>
+  <a href="#duvidas">Dúvidas</a>
+</div>
+
+<main id="topo">
+  <section class="gr-hero">
+    <div class="gr-hero__copy">
+      <p class="gr-eyebrow">Assinatura mensal · torra própria</p>
+      <h1>Café bom<br>não precisa<br>ser <em>escolhido</em><br>por você.</h1>
+      <p class="gr-lede">A gente pergunta como você toma, escolhe a torra e manda no começo do mês. Se não gostar, a próxima é por nossa conta.</p>
+      <div class="gr-hero__actions">
+        <a class="gr-btn gr-btn--dark" href="#planos">Começar por R$ 79</a>
+        <a class="gr-link" href="#como">Ver como funciona</a>
+      </div>
+      <p class="gr-small">Frete incluído · pausa em um clique · sem fidelidade</p>
+    </div>
+    <div class="gr-hero__art" data-bag-art></div>
+  </section>
+
+  <section class="gr-strip" aria-label="Garantias">
+    <p>Torra na semana do envio</p>
+    <p>Ficha do produtor no pacote</p>
+    <p>Moagem do seu método</p>
+    <p>Cancele quando quiser</p>
+  </section>
+
+  <section class="gr-section" id="como">
+    <div class="gr-section__head">
+      <h2>Três passos, um café</h2>
+      <p class="gr-small">Levamos 4 minutos</p>
+    </div>
+    <ol class="gr-steps">
+      <li>
+        <span>01</span>
+        <h3>Responda seis perguntas</h3>
+        <p>Como você toma, se usa açúcar, se gosta de acidez. Nada de vocabulário de barista.</p>
+      </li>
+      <li>
+        <span>02</span>
+        <h3>A gente escolhe a torra</h3>
+        <p>Um café por mês, de um produtor diferente. A ficha conta altitude, processo e nota de xícara.</p>
+      </li>
+      <li>
+        <span>03</span>
+        <h3>Chega moído do seu jeito</h3>
+        <p>Prensa, filtro, espresso ou máquina de cápsula. Muda quando quiser, sem taxa.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="gr-section" id="planos">
+    <div class="gr-section__head">
+      <h2>Planos</h2>
+      <div class="gr-toggle" role="group" aria-label="Periodicidade">
+        <button type="button" data-cycle="mes" aria-pressed="true">mensal</button>
+        <button type="button" data-cycle="ano" aria-pressed="false">anual · −15%</button>
+      </div>
+    </div>
+
+    <div class="gr-plans">
+      <article class="gr-plan">
+        <p class="gr-eyebrow">250 g</p>
+        <h3>Gota</h3>
+        <p class="gr-price"><span data-price="gota">R$ 79</span><small data-cycle-label>por mês</small></p>
+        <p class="gr-plan__desc">Um pacote, uma origem. Para quem toma uma xícara por dia.</p>
+        <ul>
+          <li>Moagem à escolha</li>
+          <li>Ficha do produtor</li>
+          <li>Troca se não gostar</li>
+        </ul>
+        <button class="gr-btn" type="button" data-pick="Gota">Escolher gota</button>
+      </article>
+
+      <article class="gr-plan gr-plan--main">
+        <p class="gr-eyebrow">500 g · mais assinado</p>
+        <h3>Xícara</h3>
+        <p class="gr-price"><span data-price="xicara">R$ 139</span><small data-cycle-label>por mês</small></p>
+        <p class="gr-plan__desc">Dois pacotes, duas origens. Um para a semana, outro para o fim de semana.</p>
+        <ul>
+          <li>Duas origens por mês</li>
+          <li>Moagens diferentes</li>
+          <li>Frete grátis</li>
+          <li>Acesso a microlotes</li>
+        </ul>
+        <button class="gr-btn gr-btn--dark" type="button" data-pick="Xícara">Escolher xícara</button>
+      </article>
+
+      <article class="gr-plan">
+        <p class="gr-eyebrow">1 kg</p>
+        <h3>Buquê</h3>
+        <p class="gr-price"><span data-price="buque">R$ 239</span><small data-cycle-label>por mês</small></p>
+        <p class="gr-plan__desc">Quatro pacotes para dividir com quem mora com você — ou congelar.</p>
+        <ul>
+          <li>Quatro origens</li>
+          <li>Brinde de filtro de pano</li>
+          <li>Vídeo do produtor</li>
+        </ul>
+        <button class="gr-btn" type="button" data-pick="Buquê">Escolher buquê</button>
+      </article>
+    </div>
+    <p class="gr-small">Preços fictícios. Este site é uma demonstração e não cobra nada.</p>
+  </section>
+
+  <section class="gr-section gr-section--split" id="duvidas">
+    <div class="gr-section__head">
+      <h2>Dúvidas curtas</h2>
+      <p class="gr-small">Respostas curtas também</p>
+    </div>
+    <div class="gr-faq">
+      <details>
+        <summary>E se eu não gostar do café?</summary>
+        <p>Você conta o que não gostou e a gente manda outra torra no mês seguinte, sem cobrar. Já aconteceu 11 vezes em 2.400 entregas.</p>
+      </details>
+      <details>
+        <summary>Posso pausar?</summary>
+        <p>Sim, por um a três meses, em um clique. A assinatura volta sozinha na data que você escolher.</p>
+      </details>
+      <details>
+        <summary>Vocês torram quando?</summary>
+        <p>Segunda e terça. O pacote sai no mesmo dia e chega entre quinta e sexta na maior parte do país.</p>
+      </details>
+      <details>
+        <summary>Dá para escolher a origem?</summary>
+        <p>Não — e é de propósito. A curadoria é o produto. Você escolhe o perfil, a gente escolhe o café.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="gr-section gr-final">
+    <div>
+      <h2>O próximo café<br>já está escolhido.</h2>
+      <p class="gr-lede">Deixe seu e-mail e a gente manda o questionário de seis perguntas. Nada é cobrado antes de você escolher o plano.</p>
+    </div>
+    <form class="gr-form" data-demo-form data-success="Tudo certo. Demonstração: nenhum e-mail foi guardado." novalidate>
+      <div class="gr-field">
+        <label for="gr-nome">Nome</label>
+        <input id="gr-nome" name="nome" type="text" required minlength="2" autocomplete="name">
+      </div>
+      <div class="gr-field">
+        <label for="gr-email">E-mail</label>
+        <input id="gr-email" name="email" type="email" required autocomplete="email">
+      </div>
+      <div class="gr-field">
+        <label for="gr-plano">Plano</label>
+        <select id="gr-plano" name="plano" required>
+          <option value="">Selecione</option>
+          <option>Gota</option>
+          <option>Xícara</option>
+          <option>Buquê</option>
+        </select>
+      </div>
+      <p class="gr-status" data-form-status>Demonstração: o formulário valida e não envia.</p>
+      <button class="gr-btn gr-btn--dark" type="submit">Quero o questionário</button>
+    </form>
+  </section>
+</main>
+
+<footer class="gr-foot">
+  <p>Grão · projeto conceitual 2026 · marca fictícia</p>
+  <p><a href="../../trabalhos.html">Voltar ao portfólio</a></p>
+</footer>
+
+<script src="../_shared/demo.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

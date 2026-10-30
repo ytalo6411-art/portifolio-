@@ -1,0 +1,323 @@
+/* Frequência — grafite, verde-menta, tipografia de ficha técnica. */
+
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("../../assets/fonts/instrument-sans-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Plex Mono";
+  src: url("../../assets/fonts/plex-mono-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Plex Mono";
+  src: url("../../assets/fonts/plex-mono-500.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+:root {
+  --shop-bg: #0c1015;
+  --shop-ink: #e9ecf2;
+  --shop-soft: #a8b3c0;
+  --shop-muted: #7e8ba3;
+  --shop-line: rgba(233, 236, 242, 0.16);
+  --shop-art-bg: #151b21;
+  --shop-accent: #7dd6a8;
+  --shop-accent-ink: #0a1210;
+  --shop-focus: #7dd6a8;
+  --shop-radius: 0.35rem;
+  --shop-chip-radius: 0.25rem;
+  --shop-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --shop-body: "Instrument Sans", system-ui, sans-serif;
+  --shop-display: "Instrument Sans", system-ui, sans-serif;
+  --shop-display-weight: 600;
+  --shop-display-ls: -0.035em;
+  --shop-mono: "Plex Mono", ui-monospace, monospace;
+  --shop-max: 80rem;
+  --shop-gutter: clamp(1rem, 3vw, 2.25rem);
+  --shop-bar-bg: #7dd6a8;
+  --shop-bar-ink: #0a1210;
+  --shop-brand-ls: 0.14em;
+  --shop-brand-tt: uppercase;
+  --shop-brand-weight: 500;
+}
+
+.shop-brand {
+  font-size: 0.8125rem;
+  font-family: var(--shop-mono);
+  font-weight: 500;
+}
+
+.shop-head {
+  background: rgba(12, 16, 21, 0.9);
+}
+
+.shop-display em {
+  font-style: normal;
+  color: var(--shop-accent);
+}
+
+.shop-card {
+  gap: 0.45rem;
+}
+
+.shop-card__media {
+  border: 1px solid var(--shop-line);
+  border-radius: var(--shop-radius);
+}
+
+.shop-card:hover .shop-card__media {
+  border-color: var(--shop-accent);
+}
+
+.shop-card__name {
+  font-size: 0.9375rem;
+  letter-spacing: -0.01em;
+}
+
+.shop-card__badge {
+  border-radius: 0.2rem;
+  background: var(--shop-accent);
+  color: var(--shop-accent-ink);
+}
+
+/* abertura */
+
+.fq-hero {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  padding-block: clamp(1.5rem, 4vw, 2.75rem) clamp(1.75rem, 4vw, 3rem);
+}
+
+.fq-hero__grid {
+  display: grid;
+  gap: clamp(1rem, 3vw, 2.5rem);
+}
+
+@media (min-width: 56rem) {
+  .fq-hero__grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: end;
+  }
+}
+
+.fq-hero__side {
+  display: grid;
+  gap: 1rem;
+  align-content: end;
+}
+
+.fq-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+}
+
+.fq-hero__media {
+  margin: 0;
+  background: var(--shop-art-bg);
+  border: 1px solid var(--shop-line);
+  border-radius: var(--shop-radius);
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+}
+
+.fq-hero__media svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* tabela de comparação */
+
+.fq-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--shop-line);
+  border-radius: var(--shop-radius);
+}
+
+.fq-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  min-width: 34rem;
+}
+
+.fq-table th,
+.fq-table td {
+  text-align: left;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--shop-line);
+  white-space: nowrap;
+}
+
+.fq-table thead th {
+  font-family: var(--shop-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--shop-muted);
+  font-weight: 400;
+  background: rgba(233, 236, 242, 0.03);
+}
+
+.fq-table tbody th {
+  font-weight: 500;
+}
+
+.fq-table tbody tr:last-child th,
+.fq-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.fq-table a {
+  border-bottom: 1px solid var(--shop-line);
+}
+
+.fq-table a:hover {
+  color: var(--shop-accent);
+  border-color: var(--shop-accent);
+}
+
+.fq-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* regras */
+
+.fq-rules {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+}
+
+.fq-rules article {
+  border-top: 1px solid var(--shop-line);
+  padding-top: 0.85rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.fq-rules p:last-child {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--shop-soft);
+}
+
+.fq-note {
+  margin-top: 1.75rem;
+  font-family: var(--shop-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.05em;
+  color: var(--shop-muted);
+}
+
+/* catálogo */
+
+.fq-catalog-head {
+  padding-block: clamp(1.5rem, 4vw, 2.5rem) 1.25rem;
+  display: grid;
+  gap: 0.75rem;
+  max-width: 56ch;
+}
+
+.fq-catalog-head .shop-display {
+  font-size: clamp(1.9rem, 1.2rem + 2.8vw, 3rem);
+}
+
+.shop-filters {
+  background: rgba(233, 236, 242, 0.02);
+  padding-inline: 0.9rem;
+  border-radius: var(--shop-radius);
+}
+
+.shop-search {
+  border-radius: 0.25rem;
+}
+
+.shop-select {
+  background: var(--shop-bg);
+  border-radius: 0.25rem;
+}
+
+.shop-select-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.shop-chip[aria-pressed="true"] {
+  background: var(--shop-accent);
+  border-color: var(--shop-accent);
+  color: var(--shop-accent-ink);
+}
+
+.shop-size[aria-pressed="true"] {
+  background: var(--shop-accent);
+  border-color: var(--shop-accent);
+  color: var(--shop-accent-ink);
+}
+
+/* produto */
+
+.fq-crumb {
+  font-family: var(--shop-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--shop-muted);
+  padding-top: 1.25rem;
+}
+
+.fq-pdp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  align-items: center;
+  margin-top: 0.35rem;
+}
+
+.fq-pdp-note {
+  font-family: var(--shop-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.05em;
+  color: var(--shop-muted);
+  line-height: 1.7;
+  border-left: 2px solid var(--shop-accent);
+  padding-left: 0.75rem;
+}
+
+.shop-pdp__media {
+  border-radius: var(--shop-radius);
+}
+
+.shop-drawer {
+  background: #10161c;
+}
+
+.shop-drawer__close {
+  border-radius: 0.3rem;
+}
+
+.shop-btn {
+  border-radius: 0.3rem;
+  font-weight: 500;
+}
+
+.shop-foot {
+  border-top-color: var(--shop-line);
+}
+
+.shop-foot__links a:hover {
+  color: var(--shop-accent);
+}

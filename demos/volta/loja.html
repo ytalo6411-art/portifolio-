@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Equipamento de quem volta. — Volta</title>
+<meta name="description" content="Volta é uma marca fictícia. Modelos, tabelas de numeração e preços foram inventados para este estudo de catálogo esportivo.">
+<meta name="theme-color" content="#12110d">
+<link rel="stylesheet" href="../_shared/shop.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="shop">
+
+<div class="shop-bar">
+  <a href="../../trabalhos.html">← portfólio</a>
+  <span class="shop-bar__dot" aria-hidden="true"></span>
+  <strong>Projeto conceitual</strong>
+  <span class="shop-bar__spacer"></span>
+  <a href="../../index.html">Ytalo</a>
+</div>
+
+<header class="shop-head">
+  <div class="shop-wrap shop-head__inner">
+    <a class="shop-brand" href="index.html">Volta</a>
+    <nav class="shop-nav" aria-label="Navegação da loja">
+      <a href="loja.html" aria-current="page">Catálogo</a>
+      <a href="loja.html?cat=corrida">Corrida</a>
+      <a href="loja.html?cat=academia">Academia</a>
+      <a href="loja.html?cat=trilha">Trilha</a>
+    </nav>
+    <div class="shop-head__tools">
+      <button class="shop-menu-btn shop-icon-btn" type="button" data-shop-menu aria-expanded="false" aria-controls="nav-loja">Menu</button>
+      <button class="shop-icon-btn" type="button" data-cart-open>
+        Sacola <span class="shop-cart-count" data-cart-count data-empty="true">0</span>
+      </button>
+    </div>
+  </div>
+  <div class="shop-mobile-nav shop-wrap" id="nav-loja" data-shop-mobile data-open="false">
+    <ul>
+      <li><a href="loja.html">Catálogo</a></li>
+      <li><a href="loja.html?cat=corrida">Corrida</a></li>
+      <li><a href="loja.html?cat=academia">Academia</a></li>
+      <li><a href="loja.html?cat=trilha">Trilha</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <div class="shop-wrap" style="padding-top:2rem">
+    <p class="shop-label">Catálogo · 8 itens</p>
+    <h1 class="shop-display" style="font-size:clamp(1.9rem,1.2rem+2.8vw,3.2rem);margin:.6rem 0 .9rem">Equipamento de quem volta.</h1>
+    <p class="shop-lede">Numeração real, peso em gramas e amortecimento descrito em palavras — não em adjetivo de propaganda. Filtre por modalidade ou número.</p>
+  </div>
+
+  <div class="shop-wrap">
+    <div class="shop-filters">
+      <div class="shop-filters__row">
+        <div class="shop-chips" role="group" aria-label="Filtrar por categoria">
+        <button class="shop-chip" type="button" data-filter-cat="todos" aria-pressed="true">todos</button>
+        <button class="shop-chip" type="button" data-filter-cat="corrida" aria-pressed="false">corrida</button>
+        <button class="shop-chip" type="button" data-filter-cat="academia" aria-pressed="false">academia</button>
+        <button class="shop-chip" type="button" data-filter-cat="trilha" aria-pressed="false">trilha</button>
+        </div>
+        <p class="shop-result" data-result-count>0 produtos</p>
+      </div>
+      <div class="shop-filters__row">
+        <label class="shop-search">
+          <span class="shop-label">Buscar</span>
+          <input type="search" placeholder="corrida, trilha, leve…" data-search aria-label="Buscar no catálogo">
+        </label>
+      <div class="shop-chips" role="group" aria-label="Filtrar por numeração">
+        <button class="shop-chip" type="button" data-filter-size="todos" aria-pressed="true">todos</button>
+        <button class="shop-chip" type="button" data-filter-size="38" aria-pressed="false">38</button>
+        <button class="shop-chip" type="button" data-filter-size="40" aria-pressed="false">40</button>
+        <button class="shop-chip" type="button" data-filter-size="42" aria-pressed="false">42</button>
+        <button class="shop-chip" type="button" data-filter-size="44" aria-pressed="false">44</button>
+      </div>
+        <label class="shop-select-wrap">
+          <span class="shop-label" for="sort">Ordenar</span>
+          <select class="shop-select" id="sort" data-sort>
+            <option value="padrao">seleção</option>
+            <option value="menor">menor preço</option>
+            <option value="maior">maior preço</option>
+            <option value="nome">nome</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="shop-grid" data-catalog-grid></div>
+
+    <div class="shop-empty" data-empty hidden>
+      <p>Nenhum item combina com esses filtros.</p>
+      <button class="shop-btn shop-btn--ghost" type="button" data-clear>Limpar filtros</button>
+    </div>
+
+    <section class="shop-section" style="padding-top:3rem">
+      <div class="shop-section__head">
+        <h2 class="shop-h2">Sobre o catálogo</h2>
+        <p class="shop-label">Nota</p>
+      </div>
+      <p class="shop-lede" style="max-width:60ch">Volta é uma marca fictícia. Modelos, tabelas de numeração e preços foram inventados para este estudo de catálogo esportivo.</p>
+    </section>
+  </div>
+</main>
+
+<footer class="shop-wrap shop-foot">
+  <div>
+    <p class="shop-brand">Volta</p>
+    <p class="shop-foot__note">Projeto conceitual de loja esportiva. Numeração, filtros e sacola funcionam; não existe venda, entrega ou troca real.</p>
+  </div>
+  <div class="shop-foot__links">
+    <a href="loja.html">Catálogo</a>
+    <a href="../../trabalhos.html">Outros projetos</a>
+    <a href="../../index.html">Portfólio</a>
+  </div>
+</footer>
+
+<div class="shop-scrim" data-cart-scrim data-open="false"></div>
+<aside class="shop-drawer" data-cart-drawer data-open="false" aria-hidden="true" aria-label="Sacola">
+  <div class="shop-drawer__head">
+    <h2>Sacola</h2>
+    <button class="shop-drawer__close" type="button" data-cart-close aria-label="Fechar sacola">✕</button>
+  </div>
+  <div class="shop-drawer__body" data-cart-body></div>
+  <div class="shop-drawer__foot">
+    <p class="shop-drawer__total"><span>Subtotal</span><strong data-cart-total>R$ 0,00</strong></p>
+    <p class="shop-drawer__note">Demonstração: nada é cobrado e nenhum pedido é enviado. A sacola fica guardada neste navegador.</p>
+    <button class="shop-btn shop-btn--solid" type="button" disabled>Finalizar compra (indisponível)</button>
+  </div>
+</aside>
+<div class="shop-toast" data-toast data-open="false" role="status" aria-live="polite"></div>
+
+<script src="../_shared/art.js"></script>
+<script src="data.js"></script>
+<script src="../_shared/shop.js"></script>
+
+</body>
+</html>

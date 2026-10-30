@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frequência — áudio e periféricos com ficha aberta</title>
+<meta name="description" content="Frequência é uma loja conceitual de eletrônicos: ficha técnica completa, comparação lado a lado e catálogo filtrável. Projeto de estudo.">
+<meta name="theme-color" content="#0c1015">
+<link rel="stylesheet" href="../_shared/shop.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="shop">
+
+<div class="shop-bar">
+  <a href="../../trabalhos.html">← portfólio</a>
+  <span class="shop-bar__dot" aria-hidden="true"></span>
+  <strong>Projeto conceitual</strong>
+  <span class="shop-bar__spacer"></span>
+  <a href="../../index.html">Ytalo</a>
+</div>
+
+<header class="shop-head">
+  <div class="shop-wrap shop-head__inner">
+    <a class="shop-brand" href="index.html">Frequência</a>
+    <nav class="shop-nav" aria-label="Navegação da loja">
+      <a href="loja.html">Catálogo</a>
+      <a href="loja.html?cat=áudio">Áudio</a>
+      <a href="loja.html?cat=periféricos">Periféricos</a>
+      <a href="loja.html?cat=mobile">Mobile</a>
+    </nav>
+    <div class="shop-head__tools">
+      <button class="shop-menu-btn shop-icon-btn" type="button" data-shop-menu aria-expanded="false" aria-controls="nav-loja">Menu</button>
+      <button class="shop-icon-btn" type="button" data-cart-open>
+        Sacola <span class="shop-cart-count" data-cart-count data-empty="true">0</span>
+      </button>
+    </div>
+  </div>
+  <div class="shop-mobile-nav shop-wrap" id="nav-loja" data-shop-mobile data-open="false">
+    <ul>
+      <li><a href="loja.html">Catálogo <span>8 itens</span></a></li>
+      <li><a href="loja.html?cat=áudio">Áudio</a></li>
+      <li><a href="loja.html?cat=periféricos">Periféricos</a></li>
+      <li><a href="loja.html?cat=mobile">Mobile</a></li>
+      <li><a href="loja.html?cat=casa">Casa</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="shop-wrap fq-hero">
+    <p class="shop-label">Catálogo 2026 · 8 produtos</p>
+    <div class="fq-hero__grid">
+      <h1 class="shop-display">Ficha técnica<br>antes do <em>preço</em>.</h1>
+      <div class="fq-hero__side">
+        <p class="shop-lede">Escolher fone pelo número de horas de bateria e não pela foto. Toda página de produto mostra a especificação completa, sem letra miúda.</p>
+        <div class="fq-hero__actions">
+          <a class="shop-btn shop-btn--accent" href="loja.html">Abrir catálogo</a>
+          <a class="shop-link" href="#comparar">Comparar três áudios</a>
+        </div>
+        <p class="shop-label">Frete grátis · 30 dias para devolver · garantia de 2 anos</p>
+      </div>
+    </div>
+    <figure class="fq-hero__media" data-hero-art></figure>
+  </section>
+
+  <div class="shop-strip">
+    <div class="shop-wrap">
+      <ul>
+        <li>Ficha técnica completa</li>
+        <li>Comparação lado a lado</li>
+        <li>Entrega em 3 dias úteis</li>
+        <li>Sem cadastro para comprar</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="shop-wrap shop-section" id="comparar" aria-labelledby="h-comp">
+    <div class="shop-section__head">
+      <h2 class="shop-h2" id="h-comp">Três áudios, lado a lado</h2>
+      <p class="shop-label">Dados de catálogo fictício</p>
+    </div>
+    <div class="fq-table-wrap">
+      <table class="fq-table">
+        <caption class="fq-sr">Comparação entre Fone H1, Caixa Mini e Fone TWS</caption>
+        <thead>
+          <tr>
+            <th scope="col">Modelo</th>
+            <th scope="col">Bateria</th>
+            <th scope="col">Conexão</th>
+            <th scope="col">Peso</th>
+            <th scope="col">Preço</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><a href="produto.html?p=fone-h1">Fone H1</a></th>
+            <td>38 h com ANC</td>
+            <td>Bluetooth 5.3</td>
+            <td>268 g</td>
+            <td>R$ 899</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="produto.html?p=caixa-mini">Caixa Mini</a></th>
+            <td>12 h</td>
+            <td>Bluetooth 5.3</td>
+            <td>540 g</td>
+            <td>R$ 449</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="produto.html?p=fone-tws">Fone TWS</a></th>
+            <td>6 h + 18 h</td>
+            <td>Bluetooth 5.3</td>
+            <td>4,6 g</td>
+            <td>R$ 349</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="shop-wrap shop-section" aria-labelledby="h-faixa">
+    <div class="shop-section__head">
+      <h2 class="shop-h2" id="h-faixa">Na faixa</h2>
+      <a class="shop-link" href="loja.html">Ver os 8 produtos</a>
+    </div>
+    <div class="shop-grid" data-featured="4"></div>
+  </section>
+
+  <section class="shop-wrap shop-section" aria-labelledby="h-politica">
+    <div class="shop-section__head">
+      <h2 class="shop-h2" id="h-politica">Como a loja funciona</h2>
+      <p class="shop-label">Regras curtas</p>
+    </div>
+    <div class="fq-rules">
+      <article>
+        <p class="shop-label">01 · Garantia</p>
+        <p>Dois anos para defeito de fabricação, com coleta em casa. O primeiro ano cobre também queda e oxidação.</p>
+      </article>
+      <article>
+        <p class="shop-label">02 · Devolução</p>
+        <p>Trinta dias para devolver sem motivo. O estorno cai no mesmo meio de pagamento em até cinco dias úteis.</p>
+      </article>
+      <article>
+        <p class="shop-label">03 · Conserto</p>
+        <p>Peças de reposição à venda por cinco anos. Bateria fora da garantia custa o preço de custo, publicado na ficha.</p>
+      </article>
+    </div>
+    <p class="fq-note">Frequência é uma marca inventada para estudar catálogo técnico, comparação e sacola. Nada está à venda.</p>
+  </section>
+</main>
+
+<footer class="shop-wrap shop-foot">
+  <div>
+    <p class="shop-brand">Frequência</p>
+    <p class="shop-foot__note">Projeto conceitual de e-commerce de eletrônicos. Catálogo, filtros, comparação e sacola funcionam neste navegador; pagamento não existe.</p>
+  </div>
+  <div class="shop-foot__links">
+    <a href="loja.html">Catálogo</a>
+    <a href="../../trabalhos.html">Outros projetos</a>
+    <a href="../../index.html">Portfólio</a>
+  </div>
+</footer>
+
+<div class="shop-scrim" data-cart-scrim data-open="false"></div>
+<aside class="shop-drawer" data-cart-drawer data-open="false" aria-hidden="true" aria-label="Sacola">
+  <div class="shop-drawer__head">
+    <h2>Sacola</h2>
+    <button class="shop-drawer__close" type="button" data-cart-close aria-label="Fechar sacola">✕</button>
+  </div>
+  <div class="shop-drawer__body" data-cart-body></div>
+  <div class="shop-drawer__foot">
+    <p class="shop-drawer__total"><span>Subtotal</span><strong data-cart-total>R$ 0,00</strong></p>
+    <p class="shop-drawer__note">Demonstração: nada é cobrado e nenhum pedido é enviado. A sacola fica guardada neste navegador.</p>
+    <button class="shop-btn shop-btn--solid" type="button" disabled>Finalizar compra (indisponível)</button>
+  </div>
+</aside>
+<div class="shop-toast" data-toast data-open="false" role="status" aria-live="polite"></div>
+
+<script src="../_shared/art.js"></script>
+<script src="data.js"></script>
+<script src="../_shared/shop.js"></script>
+<script>
+  (function () {
+    var hero = document.querySelector("[data-hero-art]");
+    if (hero) hero.innerHTML = Art.fone("#20272e", "#7dd6a8", "#12181d");
+  })();
+</script>
+</body>
+</html>

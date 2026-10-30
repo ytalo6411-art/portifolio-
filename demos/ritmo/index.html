@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ritmo — sequenciador de 16 passos</title>
+<meta name="description" content="Ritmo é um experimento de interface: sequenciador de 16 passos que toca de verdade, sintetizando som no próprio navegador.">
+<meta name="theme-color" content="#0d0d10">
+<link rel="stylesheet" href="../_shared/demo.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="rt">
+
+<div class="rt-bar">
+  <a href="../../trabalhos.html">← portfólio</a>
+  <span class="dot" aria-hidden="true"></span>
+  <strong>Estudo de desenvolvimento</strong>
+  <span class="hint">Ritmo · experimento interativo</span>
+  <a class="spacer" href="../../index.html">Ytalo</a>
+</div>
+
+<header class="rt-head">
+  <h1>Ritmo</h1>
+  <p>Um sequenciador de 16 passos que sintetiza o som no navegador. Sem arquivo de áudio, sem biblioteca.</p>
+</header>
+
+<main class="rt-main">
+  <section class="rt-transport" aria-label="Controles de transporte">
+    <button class="rt-play" type="button" data-play aria-pressed="false">
+      <span class="rt-play__icon" aria-hidden="true"></span>
+      <span data-play-label>Tocar</span>
+    </button>
+
+    <div class="rt-controls">
+      <label class="rt-control">
+        <span>BPM</span>
+        <input type="range" min="60" max="160" step="1" value="96" data-bpm aria-label="Batidas por minuto">
+        <b data-bpm-out>96</b>
+      </label>
+      <label class="rt-control">
+        <span>Volume</span>
+        <input type="range" min="0" max="100" step="1" value="70" data-volume aria-label="Volume geral">
+        <b data-volume-out>70</b>
+      </label>
+      <div class="rt-patterns" role="group" aria-label="Padrões">
+        <button type="button" data-pattern="A" aria-pressed="true">A</button>
+        <button type="button" data-pattern="B" aria-pressed="false">B</button>
+        <button type="button" data-pattern="C" aria-pressed="false">C</button>
+        <button type="button" data-clear>limpar</button>
+      </div>
+    </div>
+
+    <p class="rt-hint" data-audio-hint>O som começa depois do primeiro clique — os navegadores bloqueiam áudio automático.</p>
+  </section>
+
+  <section class="rt-grid" aria-label="Grade de 16 passos">
+    <div class="rt-row rt-row--head" aria-hidden="true">
+      <span class="rt-row__name"></span>
+      <div class="rt-steps" data-head></div>
+    </div>
+  </section>
+
+  <section class="rt-footer">
+    <p class="rt-note">Cada coluna é um passo de semicolcheia. O botão de tocar dispara um agendador que antecipa 100 ms, para o som não variar com a carga da máquina.</p>
+    <ul class="rt-keys">
+      <li><kbd>espaço</kbd> tocar / parar</li>
+      <li><kbd>1</kbd>–<kbd>4</kbd> ativa a linha</li>
+      <li><kbd>a</kbd> <kbd>b</kbd> <kbd>c</kbd> muda o padrão</li>
+    </ul>
+    <p class="rt-mono">Instrumentos sintetizados: bumbo (seno com queda de frequência), caixa (ruído filtrado), chimbal (ruído agudo) e nota (triângulo).</p>
+  </section>
+</main>
+
+<footer class="rt-foot">
+  <p>Ritmo · experimento 2026</p>
+  <p><a href="../../trabalhos.html">Voltar ao portfólio</a></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

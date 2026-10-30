@@ -1,0 +1,324 @@
+/* Rua Sete — papel, serifa, fio fino. Estrutura vem de _shared/shop.css. */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("../../assets/fonts/fraunces-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../../assets/fonts/fraunces-italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("../../assets/fonts/instrument-sans-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Plex Mono";
+  src: url("../../assets/fonts/plex-mono-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --shop-bg: #f2efe8;
+  --shop-ink: #17150f;
+  --shop-soft: #4a453a;
+  --shop-muted: #857d6d;
+  --shop-line: rgba(23, 21, 15, 0.16);
+  --shop-art-bg: #e7e0d2;
+  --shop-accent: #b8431f;
+  --shop-accent-ink: #fdfaf3;
+  --shop-focus: #b8431f;
+  --shop-radius: 0;
+  --shop-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --shop-body: "Instrument Sans", system-ui, sans-serif;
+  --shop-display: "Fraunces", Georgia, serif;
+  --shop-mono: "Plex Mono", ui-monospace, monospace;
+  --shop-max: 78rem;
+  --shop-gutter: clamp(1rem, 3vw, 2.25rem);
+  --shop-bar-bg: #17150f;
+  --shop-bar-ink: #f2efe8;
+  --shop-brand-ls: -0.01em;
+}
+
+.shop-brand {
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.shop-display em {
+  font-style: italic;
+  color: var(--shop-accent);
+}
+
+.shop-hero {
+  grid-template-areas: "text" "media";
+}
+
+.shop-hero__text {
+  gap: 1.1rem;
+}
+
+.shop-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.shop-hero__media svg {
+  transform: scale(1.02);
+}
+
+/* linhas do catálogo — lista editorial, não cartões */
+
+.rs-lines {
+  border-top: 1px solid var(--shop-line);
+}
+
+.rs-lines li {
+  border-bottom: 1px solid var(--shop-line);
+}
+
+.rs-lines a {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  gap: 0.25rem 1rem;
+  padding: 1.1rem 0;
+  align-items: baseline;
+}
+
+.rs-lines__name {
+  font-family: var(--shop-display);
+  font-size: clamp(1.35rem, 1.1rem + 1.2vw, 2rem);
+  letter-spacing: -0.02em;
+  transition: color 0.18s linear;
+}
+
+.rs-lines a:hover .rs-lines__name {
+  color: var(--shop-accent);
+}
+
+.rs-lines__note {
+  grid-column: 2;
+  font-size: 0.875rem;
+  color: var(--shop-soft);
+}
+
+.rs-lines__count {
+  grid-column: 2;
+  font-family: var(--shop-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--shop-muted);
+}
+
+@media (min-width: 48rem) {
+  .rs-lines a {
+    grid-template-columns: 3rem minmax(0, 16rem) minmax(0, 1fr) auto;
+    gap: 1.5rem;
+    align-items: baseline;
+  }
+  .rs-lines__note,
+  .rs-lines__count {
+    grid-column: auto;
+  }
+}
+
+/* história */
+
+.rs-story {
+  display: grid;
+  gap: clamp(1.25rem, 4vw, 3rem);
+  padding-top: 1rem;
+  border-top: 1px solid var(--shop-line);
+}
+
+@media (min-width: 52rem) {
+  .rs-story {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    align-items: start;
+  }
+}
+
+.rs-story__text {
+  display: grid;
+  gap: 0.9rem;
+  font-size: 0.9688rem;
+  line-height: 1.7;
+  color: var(--shop-soft);
+  max-width: 52ch;
+}
+
+.rs-story__text .shop-label {
+  margin-top: 0.75rem;
+  line-height: 1.7;
+}
+
+/* perguntas */
+
+.rs-faq {
+  border-top: 1px solid var(--shop-line);
+}
+
+.rs-faq details {
+  border-bottom: 1px solid var(--shop-line);
+  padding: 0.85rem 0;
+}
+
+.rs-faq summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--shop-display);
+  font-size: 1.05rem;
+}
+
+.rs-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.rs-faq summary::after {
+  content: "+";
+  font-family: var(--shop-mono);
+  font-size: 0.8125rem;
+  color: var(--shop-muted);
+}
+
+.rs-faq details[open] summary::after {
+  content: "−";
+}
+
+.rs-faq p {
+  margin-top: 0.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--shop-soft);
+  max-width: 58ch;
+}
+
+/* filtros da página de catálogo */
+
+[data-filter-cat] {
+  border-radius: 0;
+}
+
+.shop-filters {
+  border-top: 1px solid var(--shop-line);
+}
+
+.shop-card__name {
+  font-family: var(--shop-display);
+  font-size: 1.0625rem;
+}
+
+.shop-card__media {
+  border-radius: 0;
+}
+
+.shop-pdp__info {
+  gap: 1.1rem;
+}
+
+.pdp-crumb {
+  font-family: var(--shop-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--shop-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shop * {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* cabeçalho do catálogo */
+
+.rs-catalog-head {
+  padding-block: clamp(1.5rem, 4vw, 2.75rem) clamp(1rem, 2vw, 1.5rem);
+  display: grid;
+  gap: 0.9rem;
+  max-width: 60ch;
+}
+
+.rs-catalog-title {
+  font-size: clamp(2rem, 1.2rem + 3.2vw, 3.4rem);
+}
+
+.shop-select-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.shop-select {
+  background: var(--shop-bg);
+  border-radius: 0;
+}
+
+.shop-search {
+  border-radius: 0;
+  background: rgba(23, 21, 15, 0.03);
+}
+
+.shop-search .shop-label {
+  flex: 0 0 auto;
+}
+
+.rs-note {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  padding-top: 1rem;
+  border-top: 1px solid var(--shop-line);
+  display: grid;
+  gap: 0.5rem;
+  max-width: 62ch;
+}
+
+.rs-note p:last-child {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--shop-soft);
+}
+
+/* página de produto */
+
+.rs-pdp__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.rs-pdp__notes {
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--shop-soft);
+  border-left: 1px solid var(--shop-line);
+  padding-left: 1rem;
+}
+
+.rs-pdp__notes strong {
+  font-family: var(--shop-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--shop-muted);
+  font-weight: 400;
+  margin-right: 0.35rem;
+}

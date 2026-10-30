@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Malha — gerador de padrões com semente</title>
+<meta name="description" content="Malha é um experimento de desenho generativo: uma semente escolhe pontos, densidade e distorção, e o resultado vira PNG no próprio navegador.">
+<meta name="theme-color" content="#f1f0ea">
+<link rel="stylesheet" href="../_shared/demo.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="ml">
+
+<div class="ml-bar">
+  <a href="../../trabalhos.html">← portfólio</a>
+  <span class="dot" aria-hidden="true"></span>
+  <strong>Experimento</strong>
+  <span class="hint">Malha · desenho generativo</span>
+  <a class="ml-bar__spacer" href="../../index.html">Ytalo</a>
+</div>
+
+<header class="ml-head">
+  <h1>Malha</h1>
+  <p>Um número escolhe o desenho. Mude a semente e tudo muda — mesma regra, outro resultado.</p>
+</header>
+
+<main class="ml-main">
+  <section class="ml-stage-wrap" aria-label="Desenho gerado">
+    <div class="ml-stage">
+      <canvas id="malha" width="1100" height="760" aria-label="Malha generativa desenhada a partir da semente atual"></canvas>
+      <p class="ml-fallback" data-fallback hidden>
+        Seu navegador não desenhou o canvas. Os controles continuam funcionando.
+      </p>
+    </div>
+    <div class="ml-stage__foot">
+      <span class="ml-mono" data-readout>semente 4182 · 26 × 20 pontos · amplitude 12</span>
+      <span class="ml-mono" data-mode-label>modo malha</span>
+    </div>
+  </section>
+
+  <aside class="ml-panel" aria-label="Controles">
+    <div class="ml-field">
+      <label class="ml-label" for="semente">semente</label>
+      <div class="ml-seed">
+        <input id="semente" type="number" min="1" max="999999" step="1" value="4182" data-seed>
+        <button type="button" data-dice aria-label="Sortear nova semente">sortear</button>
+      </div>
+    </div>
+
+    <div class="ml-field">
+      <span class="ml-label">modo</span>
+      <div class="ml-modes" role="group" aria-label="Modo de desenho">
+        <button type="button" data-mode="malha" aria-pressed="true">malha</button>
+        <button type="button" data-mode="pontos" aria-pressed="false">pontos</button>
+        <button type="button" data-mode="linhas" aria-pressed="false">linhas</button>
+      </div>
+    </div>
+
+    <label class="ml-field">
+      <span class="ml-label">densidade <b data-density-out>26</b></span>
+      <input type="range" min="8" max="48" step="1" value="26" data-density>
+    </label>
+
+    <label class="ml-field">
+      <span class="ml-label">amplitude <b data-amp-out>12</b></span>
+      <input type="range" min="0" max="40" step="1" value="12" data-amp>
+    </label>
+
+    <div class="ml-field">
+      <span class="ml-label">tinta</span>
+      <div class="ml-inks" role="group" aria-label="Cor da tinta">
+        <button type="button" data-ink="#2f5d50" aria-pressed="true"><span style="background:#2f5d50"></span>verde</button>
+        <button type="button" data-ink="#8b3a22" aria-pressed="false"><span style="background:#8b3a22"></span>terra</button>
+        <button type="button" data-ink="#2a2a28" aria-pressed="false"><span style="background:#2a2a28"></span>grafite</button>
+      </div>
+    </div>
+
+    <div class="ml-actions">
+      <button class="ml-btn ml-btn--solid" type="button" data-export>baixar PNG</button>
+      <button class="ml-btn" type="button" data-randomize>tudo aleatório</button>
+    </div>
+
+    <p class="ml-note">
+      O desenho é feito no canvas do navegador, sem imagem de fundo. O PNG sai na resolução de 2200 × 1520 px.
+      <span data-export-status role="status"></span>
+    </p>
+  </aside>
+</main>
+
+<section class="ml-text">
+  <h2>Como funciona</h2>
+  <div class="ml-text__cols">
+    <p>Cada ponto da grade recebe um deslocamento calculado a partir da semente: duas funções trigonométricas cruzadas, uma em cada eixo. O mesmo número inteiro sempre devolve o mesmo desenho — por isso o endereço pode guardar a semente depois do <code>#</code>.</p>
+    <p>Não há textura nem imagem: são linhas e círculos vetoriais desenhados em sequência. O custo de cada quadro é proporcional à densidade, então a página desenha só quando um controle muda, nunca em loop.</p>
+  </div>
+</section>
+
+<footer class="ml-foot">
+  <p>Malha · experimento 2026</p>
+  <p>Voltar ao <a href="../../trabalhos.html">portfólio</a></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
