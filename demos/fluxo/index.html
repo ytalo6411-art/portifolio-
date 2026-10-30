@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fluxo — painel de operações</title>
+<meta name="description" content="Fluxo é um painel de operações conceitual: pedidos, status, quadro de entregas por etapa e formulário de cadastro. Dados fictícios.">
+<meta name="theme-color" content="#eef1f4">
+<link rel="stylesheet" href="../_shared/demo.css">
+<link rel="stylesheet" href="../_shared/system.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="sys fx">
+
+<div class="demo-bar">
+  <a href="../../trabalhos.html">← portfólio</a>
+  <span class="dot" aria-hidden="true"></span>
+  <strong>Projeto conceitual</strong>
+  <span class="hint">Fluxo · painel de operações</span>
+  <a class="spacer" href="../../index.html">Ytalo</a>
+</div>
+
+<div class="sys-shell">
+  <aside class="sys-side" aria-label="Navegação do painel">
+    <a class="sys-brand" href="#painel">
+      <span aria-hidden="true"></span>
+      Fluxo
+    </a>
+
+    <nav class="sys-nav" aria-label="Visões">
+      <button type="button" data-view-link="painel" data-label="Painel" data-sub="Operação · semana 40">
+        Painel
+      </button>
+      <button type="button" data-view-link="pedidos" data-label="Pedidos" data-sub="Fila de expedição">
+        Pedidos <span class="sys-count">24</span>
+      </button>
+      <button type="button" data-view-link="entregas" data-label="Entregas" data-sub="Quadro por etapa">
+        Entregas <span class="sys-count">11</span>
+      </button>
+      <button type="button" data-view-link="cadastro" data-label="Novo pedido" data-sub="Formulário de demonstração">
+        Novo pedido
+      </button>
+    </nav>
+
+    <div class="sys-user">
+      <span class="sys-avatar" aria-hidden="true">RC</span>
+      <div>
+        <p class="sys-user__name">Rafa Couto</p>
+        <p class="sys-user__role">operações · demo</p>
+      </div>
+    </div>
+
+    <p class="sys-note">Painel de demonstração com dados inventados. Não representa empresa, cliente ou resultado real.</p>
+  </aside>
+
+  <main class="sys-main">
+    <div class="sys-top">
+      <div>
+        <h1 data-view-title>Painel</h1>
+        <p class="sys-top__sub" data-view-sub>Operação · semana 40</p>
+      </div>
+      <div class="sys-top__tools">
+        <label class="sys-search">
+          <span class="sys-label">busca</span>
+          <input type="search" placeholder="pedido, cliente, cidade…" data-table-search aria-label="Buscar pedido">
+        </label>
+        <button class="sys-btn sys-btn--primary" type="button" data-view-link="cadastro" data-label="Novo pedido" data-sub="Formulário de demonstração">+ pedido</button>
+      </div>
+    </div>
+
+    <!-- painel -->
+    <section class="sys-view" data-view="painel">
+      <div class="sys-grid">
+        <article class="sys-card">
+          <p class="sys-label">pedidos hoje</p>
+          <p class="sys-metric__value">24</p>
+          <p class="sys-metric__delta" data-dir="up">+6 sobre ontem</p>
+        </article>
+        <article class="sys-card">
+          <p class="sys-label">tempo médio de separação</p>
+          <p class="sys-metric__value">2h 14</p>
+          <p class="sys-metric__delta" data-dir="up">−18 min na semana</p>
+        </article>
+        <article class="sys-card">
+          <p class="sys-label">pedidos com atraso</p>
+          <p class="sys-metric__value">3</p>
+          <p class="sys-metric__delta" data-dir="down">de 24 em aberto</p>
+        </article>
+        <article class="sys-card">
+          <p class="sys-label">capacidade do dia</p>
+          <p class="sys-metric__value">78%</p>
+          <p class="sys-metric__delta" data-dir="up">5 vagas livres</p>
+        </article>
+      </div>
+
+      <div class="sys-grid">
+        <article class="sys-card sys-card--wide">
+          <div class="sys-card__head">
+            <h2>Volume por dia</h2>
+            <span class="sys-label">pedidos despachados</span>
+          </div>
+          <div class="sys-chart" data-chart data-values="18,22,19,26,31,24,17,21,28,30,27,24" data-labels="seg,ter,qua,qui,sex,sáb,dom,seg,ter,qua,qui,sex" data-unit="" role="img" aria-label="Pedidos despachados por dia, entre 17 e 31"></div>
+          <div class="sys-axis" data-chart-axis></div>
+        </article>
+      </div>
+
+      <div class="sys-grid">
+        <article class="sys-card">
+          <div class="sys-card__head">
+            <h2>Gargalos</h2>
+            <span class="sys-label">agora</span>
+          </div>
+          <ul class="fx-list">
+            <li><span>Conferência de nota</span><b>4 pedidos</b></li>
+            <li><span>Embalagem frágil</span><b>2 pedidos</b></li>
+            <li><span>Coleta atrasada</span><b>3 pedidos</b></li>
+          </ul>
+        </article>
+        <article class="sys-card">
+          <div class="sys-card__head">
+            <h2>Equipe em turno</h2>
+            <span class="sys-label">4 de 6</span>
+          </div>
+          <ul class="fx-team">
+            <li><span class="sys-avatar" aria-hidden="true">LS</span>Lia · separação</li>
+            <li><span class="sys-avatar" aria-hidden="true">MT</span>Mateus · conferência</li>
+            <li><span class="sys-avatar" aria-hidden="true">BV</span>Bia · embalagem</li>
+            <li><span class="sys-avatar" aria-hidden="true">JO</span>Joana · expedição</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- pedidos -->
+    <section class="sys-view" data-view="pedidos" hidden>
+      <div class="sys-toolbar">
+        <button class="sys-chip" type="button" data-status-filter="todos" aria-pressed="true">todos</button>
+        <button class="sys-chip" type="button" data-status-filter="separacao" aria-pressed="false">separação</button>
+        <button class="sys-chip" type="button" data-status-filter="conferencia" aria-pressed="false">conferência</button>
+        <button class="sys-chip" type="button" data-status-filter="enviado" aria-pressed="false">enviado</button>
+        <button class="sys-chip" type="button" data-status-filter="atraso" aria-pressed="false">atraso</button>
+        <span class="sys-count-label" data-table-count>—</span>
+      </div>
+
+      <div class="sys-table-wrap">
+        <table class="sys-table" data-sortable-table data-filter-table>
+          <caption>Fila de expedição · dados fictícios; clique no cabeçalho para ordenar</caption>
+          <thead>
+            <tr>
+              <th scope="col" data-sortable="pedido">pedido</th>
+              <th scope="col" data-sortable="cliente">cliente</th>
+              <th scope="col" data-sortable="cidade">destino</th>
+              <th scope="col" data-sortable="etapa">etapa</th>
+              <th scope="col" class="num" data-sortable="itens">itens</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="separacao">
+              <td data-value="4821"><button class="sys-link" type="button" data-drawer-open data-title="Pedido 4821" data-fact-cliente="Mercado Bom Dia" data-fact-destino="Campinas · SP" data-fact-itens="6 volumes" data-fact-transportadora="Rota Sul" data-state="neutral" data-status-label="separação">4821</button></td>
+              <td>Mercado Bom Dia</td>
+              <td>Campinas · SP</td>
+              <td><span class="sys-badge" data-state="neutral">separação</span></td>
+              <td class="num" data-value="6">6</td>
+            </tr>
+            <tr data-status="conferencia">
+              <td data-value="4822"><button class="sys-link" type="button" data-drawer-open data-title="Pedido 4822" data-fact-cliente="Casa Verde" data-fact-destino="Valinhos · SP" data-fact-itens="2 volumes" data-fact-transportadora="Entrega própria" data-state="warn" data-status-label="conferência">4822</button></td>
+              <td>Casa Verde</td>
+              <td>Valinhos · SP</td>
+              <td><span class="sys-badge" data-state="warn">conferência</span></td>
+              <td class="num" data-value="2">2</td>
+            </tr>
+            <tr data-status="enviado">
+              <td data-value="4819"><button class="sys-link" type="button" data-drawer-open data-title="Pedido 4819" data-fact-cliente="Ofícina Lima" data-fact-destino="Jundiaí · SP" data-fact-itens="1 volume" data-fact-transportadora="Rota Sul" data-state="ok" data-status-label="enviado">4819</button></td>
+              <td>Ofícina Lima</td>
+              <td>Jundiaí · SP</td>
+              <td><span class="sys-badge" data-state="ok">enviado</span></td>
+              <td class="num" data-value="1">1</td>
+            </tr>
+            <tr data-status="atraso">
+              <td data-value="4808"><button class="sys-link" type="button" data-drawer-open data-title="Pedido 4808" data-fact-cliente="Studio Árvo" data-fact-destino="São Paulo · SP" data-fact-itens="4 volumes" data-fact-transportadora="Transportes Norte" data-state="bad" data-status-label="atraso">4808</button></td>
+              <td>Studio Árvo</td>
+              <td>São Paulo · SP</td>
+              <td><span class="sys-badge" data-state="bad">atraso</span></td>
+              <td class="num" data-value="4">4</td>
+            </tr>
+            <tr data-status="separacao">
+              <td data-value="4823"><button class="sys-link" type="button" data-drawer-open data-title="Pedido 4823" data-fact-cliente="Ponto Norte" data-fact-destino="Hortolândia · SP" data-fact-itens="3 volumes" data-fact-transportadora="Rota Sul" data-state="neutral" data-status-label="separação">4823</button></td>
+              <td>Ponto Norte</td>
+              <td>Hortolândia · SP</td>
+              <td><span class="sys-badge" data-state="neutral">separação</span></td>
+              <td class="num" data-value="3">3</td>
+            </tr>
+            <tr data-status="enviado">
+              <td data-value="4815"><button class="sys-link" type="button" data-drawer-open data-title="Pedido 4815" data-fact-cliente="Banca 9" data-fact-destino="Campinas · SP" data-fact-itens="8 volumes" data-fact-transportadora="Entrega própria" data-state="ok" data-status-label="enviado">4815</button></td>
+              <td>Banca 9</td>
+              <td>Campinas · SP</td>
+              <td><span class="sys-badge" data-state="ok">enviado</span></td>
+              <td class="num" data-value="8">8</td>
+            </tr>
+            <tr data-status="conferencia">
+              <td data-value="4824"><button class="sys-link" type="button" data-drawer-open data-title="Pedido 4824" data-fact-cliente="Ferragem Dois Irmãos" data-fact-destino="Sumaré · SP" data-fact-itens="5 volumes" data-fact-transportadora="Transportes Norte" data-state="warn" data-status-label="conferência">4824</button></td>
+              <td>Ferragem Dois Irmãos</td>
+              <td>Sumaré · SP</td>
+              <td><span class="sys-badge" data-state="warn">conferência</span></td>
+              <td class="num" data-value="5">5</td>
+            </tr>
+            <tr data-status="atraso">
+              <td data-value="4802"><button class="sys-link" type="button" data-drawer-open data-title="Pedido 4802" data-fact-cliente="Café da Praça" data-fact-destino="Indaiatuba · SP" data-fact-itens="2 volumes" data-fact-transportadora="Transportes Norte" data-state="bad" data-status-label="atraso">4802</button></td>
+              <td>Café da Praça</td>
+              <td>Indaiatuba · SP</td>
+              <td><span class="sys-badge" data-state="bad">atraso</span></td>
+              <td class="num" data-value="2">2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sys-note" data-table-empty hidden>Nenhum pedido com esse filtro.</p>
+    </section>
+
+    <!-- entregas -->
+    <section class="sys-view" data-view="entregas" hidden>
+      <div class="kanban">
+        <div class="kanban__col">
+          <h3>separação <span>5</span></h3>
+          <button class="kanban__card" type="button" data-drawer-open data-title="Pedido 4821" data-fact-cliente="Mercado Bom Dia" data-fact-etapa="separação" data-fact-prazo="hoje, 15h" data-fact-itens="6 volumes" data-state="neutral" data-status-label="separação">
+            <strong>4821 · Mercado Bom Dia</strong>
+            <p>6 volumes · Campinas</p>
+            <div class="kanban__tags"><span class="sys-chip">hoje</span><span class="sys-chip">rota sul</span></div>
+          </button>
+          <button class="kanban__card" type="button" data-drawer-open data-title="Pedido 4823" data-fact-cliente="Ponto Norte" data-fact-etapa="separação" data-fact-prazo="hoje, 17h" data-fact-itens="3 volumes" data-state="neutral" data-status-label="separação">
+            <strong>4823 · Ponto Norte</strong>
+            <p>3 volumes · Hortolândia</p>
+            <div class="kanban__tags"><span class="sys-chip">hoje</span></div>
+          </button>
+        </div>
+
+        <div class="kanban__col">
+          <h3>conferência <span>3</span></h3>
+          <button class="kanban__card" type="button" data-drawer-open data-title="Pedido 4822" data-fact-cliente="Casa Verde" data-fact-etapa="conferência" data-fact-prazo="hoje, 14h" data-fact-itens="2 volumes" data-state="warn" data-status-label="conferência">
+            <strong>4822 · Casa Verde</strong>
+            <p>2 volumes · Valinhos</p>
+            <div class="kanban__tags"><span class="sys-chip">frágil</span></div>
+          </button>
+          <button class="kanban__card" type="button" data-drawer-open data-title="Pedido 4824" data-fact-cliente="Ferragem Dois Irmãos" data-fact-etapa="conferência" data-fact-prazo="hoje, 16h" data-fact-itens="5 volumes" data-state="warn" data-status-label="conferência">
+            <strong>4824 · Ferragem Dois Irmãos</strong>
+            <p>5 volumes · Sumaré</p>
+            <div class="kanban__tags"><span class="sys-chip">nota pendente</span></div>
+          </button>
+        </div>
+
+        <div class="kanban__col">
+          <h3>enviado <span>8</span></h3>
+          <button class="kanban__card" type="button" data-drawer-open data-title="Pedido 4819" data-fact-cliente="Ofícina Lima" data-fact-etapa="enviado" data-fact-prazo="saiu 11h20" data-fact-itens="1 volume" data-state="ok" data-status-label="enviado">
+            <strong>4819 · Ofícina Lima</strong>
+            <p>1 volume · Jundiaí</p>
+            <div class="kanban__tags"><span class="sys-chip">rastreio ativo</span></div>
+          </button>
+          <button class="kanban__card" type="button" data-drawer-open data-title="Pedido 4815" data-fact-cliente="Banca 9" data-fact-etapa="enviado" data-fact-prazo="saiu 10h05" data-fact-itens="8 volumes" data-state="ok" data-status-label="enviado">
+            <strong>4815 · Banca 9</strong>
+            <p>8 volumes · Campinas</p>
+            <div class="kanban__tags"><span class="sys-chip">entrega própria</span></div>
+          </button>
+        </div>
+
+        <div class="kanban__col">
+          <h3>atraso <span>2</span></h3>
+          <button class="kanban__card" type="button" data-drawer-open data-title="Pedido 4808" data-fact-cliente="Studio Árvo" data-fact-etapa="atraso" data-fact-prazo="venceu ontem" data-fact-itens="4 volumes" data-state="bad" data-status-label="atraso">
+            <strong>4808 · Studio Árvo</strong>
+            <p>4 volumes · São Paulo</p>
+            <div class="kanban__tags"><span class="sys-chip">coleta perdida</span></div>
+          </button>
+          <button class="kanban__card" type="button" data-drawer-open data-title="Pedido 4802" data-fact-cliente="Café da Praça" data-fact-etapa="atraso" data-fact-prazo="venceu há 2 dias" data-fact-itens="2 volumes" data-state="bad" data-status-label="atraso">
+            <strong>4802 · Café da Praça</strong>
+            <p>2 volumes · Indaiatuba</p>
+            <div class="kanban__tags"><span class="sys-chip">cliente avisado</span></div>
+          </button>
+        </div>
+      </div>
+      <p class="sys-note">Clique em um cartão para abrir o detalhe. As etapas são só ilustrativas desta demonstração.</p>
+    </section>
+
+    <!-- novo pedido -->
+    <section class="sys-view" data-view="cadastro" hidden>
+      <div class="sys-grid">
+        <article class="sys-card sys-card--wide">
+          <div class="sys-card__head">
+            <h2>Novo pedido</h2>
+            <span class="sys-label">demonstração</span>
+          </div>
+          <form class="sys-form" data-demo-form data-success="Pedido criado nesta demonstração. Nenhum dado saiu do navegador.">
+            <div class="sys-form__row">
+              <div class="sys-field">
+                <label for="fx-cliente">cliente</label>
+                <input id="fx-cliente" name="cliente" required placeholder="Nome do cliente">
+              </div>
+              <div class="sys-field">
+                <label for="fx-cidade">cidade</label>
+                <input id="fx-cidade" name="cidade" required placeholder="Campinas · SP">
+              </div>
+            </div>
+            <div class="sys-form__row">
+              <div class="sys-field">
+                <label for="fx-itens">volumes</label>
+                <input id="fx-itens" name="volumes" type="number" min="1" max="40" required placeholder="4">
+              </div>
+              <div class="sys-field">
+                <label for="fx-prazo">prazo</label>
+                <select id="fx-prazo" name="prazo" required>
+                  <option value="">selecione</option>
+                  <option>Hoje</option>
+                  <option>Amanhã</option>
+                  <option>Em 3 dias</option>
+                </select>
+              </div>
+            </div>
+            <button class="sys-btn sys-btn--primary" type="submit">Criar pedido</button>
+            <p class="sys-form__status" data-form-status role="status" aria-live="polite"></p>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="sys-scrim" data-drawer-scrim data-open="false"></div>
+<aside class="sys-drawer" data-drawer data-open="false" aria-hidden="true" aria-label="Detalhe do pedido">
+  <div class="sys-drawer__head">
+    <div>
+      <h2 data-drawer-title>Pedido</h2>
+      <span class="sys-badge" data-drawer-status data-state="neutral">—</span>
+    </div>
+    <button class="sys-drawer__close" type="button" data-drawer-close aria-label="Fechar detalhe">×</button>
+  </div>
+  <div class="sys-drawer__body">
+    <dl class="sys-dl" data-drawer-facts></dl>
+    <p class="sys-note">Detalhe ilustrativo. Este painel não está ligado a nenhum sistema de verdade.</p>
+  </div>
+</aside>
+
+<script src="../_shared/system.js"></script>
+<script src="../_shared/demo.js"></script>
+</body>
+</html>

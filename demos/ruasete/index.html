@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rua Sete — roupas para o dia comum</title>
+<meta name="description" content="Rua Sete é uma loja conceitual de roupas contemporâneas: camisaria, alfaiataria e malharia em pequenos lotes. Projeto de estudo, sem loja real.">
+<meta name="theme-color" content="#f2efe8">
+<link rel="stylesheet" href="../_shared/shop.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="shop">
+
+<div class="shop-bar">
+  <a href="../../trabalhos.html">← portfólio</a>
+  <span class="shop-bar__dot" aria-hidden="true"></span>
+  <strong>Projeto conceitual</strong>
+  <span class="shop-bar__spacer"></span>
+  <a href="../../index.html">Ytalo</a>
+</div>
+
+<header class="shop-head">
+  <div class="shop-wrap shop-head__inner">
+    <a class="shop-brand" href="index.html">Rua Sete</a>
+    <nav class="shop-nav" aria-label="Navegação da loja">
+      <a href="loja.html">Catálogo</a>
+      <a href="loja.html?cat=camisaria">Camisaria</a>
+      <a href="loja.html?cat=alfaiataria">Alfaiataria</a>
+      <a href="loja.html?cat=malharia">Malharia</a>
+    </nav>
+    <div class="shop-head__tools">
+      <button class="shop-menu-btn shop-icon-btn" type="button" data-shop-menu aria-expanded="false" aria-controls="nav-loja">Menu</button>
+      <a class="shop-icon-btn" href="loja.html">Buscar</a>
+      <button class="shop-icon-btn" type="button" data-cart-open>
+        Sacola <span class="shop-cart-count" data-cart-count data-empty="true">0</span>
+      </button>
+    </div>
+  </div>
+  <div class="shop-mobile-nav shop-wrap" id="nav-loja" data-shop-mobile data-open="false">
+    <ul>
+      <li><a href="loja.html">Catálogo <span>8 peças</span></a></li>
+      <li><a href="loja.html?cat=camisaria">Camisaria</a></li>
+      <li><a href="loja.html?cat=alfaiataria">Alfaiataria</a></li>
+      <li><a href="loja.html?cat=malharia">Malharia</a></li>
+      <li><a href="loja.html?cat=acessórios">Acessórios</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="shop-wrap shop-hero">
+    <div class="shop-hero__text">
+      <p class="shop-label">Coleção 03 · primavera</p>
+      <h1 class="shop-display">Roupa para o dia<br>que já começou.</h1>
+      <p class="shop-lede">Oito peças em pequenos lotes, feitas para durar mais de uma estação. Sem estampa, sem pressa, sem coleção nova a cada mês.</p>
+      <div class="shop-hero__actions">
+        <a class="shop-btn shop-btn--solid" href="loja.html">Ver o catálogo</a>
+        <a class="shop-link" href="#historias">Por que tão poucas peças</a>
+      </div>
+    </div>
+    <figure class="shop-hero__media" data-hero-art></figure>
+  </section>
+
+  <div class="shop-strip">
+    <div class="shop-wrap">
+      <ul>
+        <li>Frete grátis acima de R$ 320</li>
+        <li>Troca em 30 dias</li>
+        <li>Produção em lotes de 120 peças</li>
+        <li>Algodão de fornecedor auditado</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="shop-wrap shop-section" aria-labelledby="h-linhas">
+    <div class="shop-section__head">
+      <h2 class="shop-h2" id="h-linhas">Quatro linhas</h2>
+      <p class="shop-label">8 peças no total</p>
+    </div>
+    <ul class="rs-lines">
+      <li>
+        <a href="loja.html?cat=camisaria">
+          <span class="shop-label">01</span>
+          <span class="rs-lines__name">Camisaria</span>
+          <span class="rs-lines__note">linho e algodão de trama aberta</span>
+          <span class="rs-lines__count">3 peças</span>
+        </a>
+      </li>
+      <li>
+        <a href="loja.html?cat=alfaiataria">
+          <span class="shop-label">02</span>
+          <span class="rs-lines__name">Alfaiataria</span>
+          <span class="rs-lines__note">pregas, cintura alta, caimento reto</span>
+          <span class="rs-lines__count">2 peças</span>
+        </a>
+      </li>
+      <li>
+        <a href="loja.html?cat=malharia">
+          <span class="shop-label">03</span>
+          <span class="rs-lines__name">Malharia</span>
+          <span class="rs-lines__note">algodão penteado 30.1</span>
+          <span class="rs-lines__count">2 peças</span>
+        </a>
+      </li>
+      <li>
+        <a href="loja.html?cat=acessórios">
+          <span class="shop-label">04</span>
+          <span class="rs-lines__name">Acessórios</span>
+          <span class="rs-lines__note">lona, couro, costura reforçada</span>
+          <span class="rs-lines__count">1 peça</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="shop-wrap shop-section" aria-labelledby="h-destaque">
+    <div class="shop-section__head">
+      <h2 class="shop-h2" id="h-destaque">Na vitrine</h2>
+      <a class="shop-link" href="loja.html">Ver tudo</a>
+    </div>
+    <div class="shop-grid" data-featured="4"></div>
+  </section>
+
+  <section class="shop-wrap shop-section" id="historias" aria-labelledby="h-historias">
+    <div class="rs-story">
+      <div>
+        <p class="shop-label">Sobre a loja</p>
+        <h2 class="shop-h2" style="margin-top:.75rem">Pouca peça,<br>feita devagar.</h2>
+      </div>
+      <div class="rs-story__text">
+        <p>A Rua Sete nasceu de uma ideia simples: um guarda-roupa com menos opções e mais uso. Cada peça é desenhada para combinar com as outras, então oito peças viram semanas de combinação.</p>
+        <p>Produzimos em lotes pequenos. Quando um lote acaba, a peça só volta se o tecido ainda existir — por isso a etiqueta traz o número do lote e a data de corte.</p>
+        <p class="shop-label">Rua Sete é uma marca inventada para este exercício de interface. Nada aqui está à venda.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="shop-wrap shop-section" aria-labelledby="h-cuidado">
+    <div class="shop-section__head">
+      <h2 class="shop-h2" id="h-cuidado">Três perguntas</h2>
+      <p class="shop-label">Respostas curtas</p>
+    </div>
+    <div class="rs-faq">
+      <details>
+        <summary>Como sei meu tamanho?</summary>
+        <p>Cada página de produto traz as medidas da peça em centímetros, não do corpo. Compare com uma roupa que já serve em você.</p>
+      </details>
+      <details>
+        <summary>O tecido muda com a lavagem?</summary>
+        <p>O linho amacia e ganha marca de dobra. O algodão pode encolher até 3% na primeira lavagem — por isso as medidas são da peça já lavada.</p>
+      </details>
+      <details>
+        <summary>Por que só oito peças?</summary>
+        <p>Porque a ideia é que você reconheça todas. Um catálogo grande vira ruído; oito peças bem resolvidas já cobrem o dia comum.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer class="shop-wrap shop-foot">
+  <div>
+    <p class="shop-brand">Rua Sete</p>
+    <p class="shop-foot__note">Projeto conceitual de loja de roupas, feito para estudar catálogo, filtros, página de produto e sacola. Marca fictícia, produtos fictícios, sem cobrança.</p>
+  </div>
+  <div class="shop-foot__links">
+    <a href="loja.html">Catálogo</a>
+    <a href="../../trabalhos.html">Outros projetos</a>
+    <a href="../../index.html">Portfólio</a>
+  </div>
+</footer>
+
+<div class="shop-scrim" data-cart-scrim data-open="false"></div>
+<aside class="shop-drawer" data-cart-drawer data-open="false" aria-hidden="true" aria-label="Sacola">
+  <div class="shop-drawer__head">
+    <h2>Sacola</h2>
+    <button class="shop-drawer__close" type="button" data-cart-close aria-label="Fechar sacola">✕</button>
+  </div>
+  <div class="shop-drawer__body" data-cart-body></div>
+  <div class="shop-drawer__foot">
+    <p class="shop-drawer__total"><span>Subtotal</span><strong data-cart-total>R$ 0,00</strong></p>
+    <p class="shop-drawer__note">Demonstração: nada é cobrado e nenhum pedido é enviado. O conteúdo da sacola fica guardado neste navegador.</p>
+    <button class="shop-btn shop-btn--solid" type="button" disabled>Finalizar compra (indisponível)</button>
+  </div>
+</aside>
+<div class="shop-toast" data-toast data-open="false" role="status" aria-live="polite"></div>
+
+<script src="../_shared/art.js"></script>
+<script src="data.js"></script>
+<script src="../_shared/shop.js"></script>
+<script>
+  (function () {
+    var hero = document.querySelector("[data-hero-art]");
+    if (hero) hero.innerHTML = Art.camisa("#c9a887", "#8d6b4c", "#e8dfd1");
+  })();
+</script>
+</body>
+</html>

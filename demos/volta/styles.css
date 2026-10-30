@@ -1,0 +1,375 @@
+/* Volta — quase preto, laranja de pista, sans pesada em caixa alta. */
+
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("../../assets/fonts/instrument-sans-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Plex Mono";
+  src: url("../../assets/fonts/plex-mono-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Plex Mono";
+  src: url("../../assets/fonts/plex-mono-500.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+:root {
+  --shop-bg: #12110d;
+  --shop-ink: #f0ece1;
+  --shop-soft: #b3ae9f;
+  --shop-muted: #8f8a78;
+  --shop-line: rgba(240, 236, 225, 0.16);
+  --shop-art-bg: #1a1913;
+  --shop-accent: #e8603a;
+  --shop-accent-ink: #12110d;
+  --shop-focus: #e8603a;
+  --shop-radius: 0;
+  --shop-chip-radius: 0;
+  --shop-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --shop-body: "Instrument Sans", system-ui, sans-serif;
+  --shop-display: "Instrument Sans", system-ui, sans-serif;
+  --shop-display-weight: 700;
+  --shop-display-ls: -0.045em;
+  --shop-mono: "Plex Mono", ui-monospace, monospace;
+  --shop-max: 80rem;
+  --shop-gutter: clamp(1rem, 3vw, 2.25rem);
+  --shop-bar-bg: #e8603a;
+  --shop-bar-ink: #12110d;
+  --shop-brand-ls: 0.24em;
+  --shop-brand-tt: uppercase;
+  --shop-brand-weight: 700;
+}
+
+.shop-brand {
+  font-size: 0.9375rem;
+}
+
+.shop-head {
+  background: rgba(18, 17, 13, 0.92);
+  border-bottom-color: var(--shop-line);
+}
+
+.shop-nav a {
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+}
+
+.shop-display em {
+  font-style: normal;
+  color: var(--shop-accent);
+}
+
+.shop-card__media {
+  border: 1px solid var(--shop-line);
+}
+
+.shop-card:hover .shop-card__media {
+  border-color: var(--shop-accent);
+}
+
+.shop-card__name {
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.shop-card__badge {
+  background: var(--shop-accent);
+  color: var(--shop-accent-ink);
+  font-weight: 500;
+}
+
+.shop-chip[aria-pressed="true"] {
+  background: var(--shop-accent);
+  border-color: var(--shop-accent);
+  color: var(--shop-accent-ink);
+}
+
+/* abertura */
+
+.vt-hero {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  padding-block: clamp(1.5rem, 4vw, 2.75rem) clamp(1.5rem, 3vw, 2.25rem);
+}
+
+@media (min-width: 56rem) {
+  .vt-hero {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: center;
+  }
+  .vt-stats {
+    grid-column: 1 / -1;
+  }
+}
+
+.vt-hero__copy {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.vt-hero__title {
+  font-size: clamp(2.4rem, 1.2rem + 5vw, 4.6rem);
+  text-transform: uppercase;
+  line-height: 0.94;
+}
+
+.vt-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin-top: 0.35rem;
+}
+
+.vt-hero__media {
+  margin: 0;
+  background: var(--shop-art-bg);
+  border: 1px solid var(--shop-line);
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.vt-hero__media svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.vt-stats {
+  display: grid;
+  gap: 1rem;
+  border-block: 1px solid var(--shop-line);
+  padding-block: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .vt-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.vt-stats li {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.vt-stats strong {
+  font-size: clamp(1.35rem, 1rem + 1.4vw, 1.9rem);
+  letter-spacing: -0.03em;
+  color: var(--shop-accent);
+}
+
+.vt-stats span {
+  font-family: var(--shop-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--shop-muted);
+}
+
+/* modalidades */
+
+.vt-modes {
+  border-top: 1px solid var(--shop-line);
+}
+
+.vt-modes li {
+  border-bottom: 1px solid var(--shop-line);
+}
+
+.vt-modes a {
+  display: grid;
+  gap: 0.3rem;
+  padding: 1.1rem 0;
+}
+
+@media (min-width: 52rem) {
+  .vt-modes a {
+    grid-template-columns: 3rem minmax(0, 12rem) minmax(0, 1fr) auto;
+    gap: 1.5rem;
+    align-items: baseline;
+  }
+}
+
+.vt-modes__num {
+  font-family: var(--shop-mono);
+  font-size: 0.6875rem;
+  color: var(--shop-accent);
+}
+
+.vt-modes__name {
+  font-size: clamp(1.25rem, 1rem + 1.2vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.vt-modes__note {
+  font-size: 0.875rem;
+  color: var(--shop-soft);
+  max-width: 44ch;
+}
+
+.vt-modes__cta {
+  font-family: var(--shop-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--shop-muted);
+}
+
+.vt-modes a:hover .vt-modes__name {
+  color: var(--shop-accent);
+}
+
+/* tabela de numeração */
+
+.vt-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--shop-line);
+}
+
+.vt-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  min-width: 26rem;
+}
+
+.vt-table caption {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-family: var(--shop-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--shop-muted);
+  border-bottom: 1px solid var(--shop-line);
+}
+
+.vt-table th,
+.vt-table td {
+  padding: 0.7rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--shop-line);
+}
+
+.vt-table thead th {
+  font-family: var(--shop-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--shop-muted);
+  font-weight: 400;
+}
+
+.vt-table tbody tr:last-child th,
+.vt-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.vt-note {
+  margin-top: 0.9rem;
+  font-family: var(--shop-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+  color: var(--shop-muted);
+  max-width: 60ch;
+}
+
+/* sobre */
+
+.vt-about {
+  display: grid;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--shop-line);
+}
+
+@media (min-width: 52rem) {
+  .vt-about {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 2.5rem;
+  }
+  .vt-about .shop-h2 {
+    text-transform: uppercase;
+  }
+}
+
+.vt-about__text {
+  display: grid;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--shop-soft);
+  max-width: 54ch;
+}
+
+/* catálogo e produto */
+
+.shop-filters {
+  border-top: 1px solid var(--shop-line);
+}
+
+.shop-search {
+  border-radius: 0;
+}
+
+.shop-select {
+  background: var(--shop-bg);
+  border-radius: 0;
+}
+
+.shop-select-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vt-crumb {
+  padding-top: 1.25rem;
+  font-family: var(--shop-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--shop-muted);
+}
+
+.vt-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin-top: 0.3rem;
+}
+
+.vt-note {
+  border-left: 2px solid var(--shop-accent);
+  padding-left: 0.85rem;
+}
+
+.shop-pdp__price {
+  color: var(--shop-accent);
+}
+
+.shop-size[aria-pressed="true"] {
+  background: var(--shop-accent);
+  border-color: var(--shop-accent);
+  color: var(--shop-accent-ink);
+}
+
+.shop-pdp__media {
+  border-radius: 0;
+}

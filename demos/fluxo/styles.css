@@ -1,0 +1,191 @@
+/* Fluxo — painel de operações: cinza-azulado, tinta grafite, azul de aço. */
+
+.fx {
+  --sys-bg: #eef1f4;
+  --sys-ink: #15191d;
+  --sys-muted: #6d7885;
+  --sys-soft: #3f4a55;
+  --sys-line: rgba(21, 25, 29, 0.13);
+  --sys-card: #ffffff;
+  --sys-side-bg: #1b2128;
+  --sys-input-bg: #f7f9fb;
+  --sys-thead-bg: #f2f5f8;
+  --sys-accent: #26648c;
+  --sys-accent-ink: #ffffff;
+  --sys-accent-strong: #10486c;
+  --sys-active-bg: #dceaf4;
+  --sys-active-ink: #0f3d59;
+  --sys-hover: #eaf0f5;
+  --sys-up: #1f7a52;
+  --sys-down: #b0402f;
+  --sys-warn: #9a6a12;
+  --sys-radius: 0.3rem;
+  --sys-display: "Instrument Sans", system-ui, sans-serif;
+  --sys-display-weight: 600;
+}
+
+/* barra lateral escura */
+
+.fx .sys-side {
+  background: var(--sys-side-bg);
+  border-right: 0;
+  color: #dbe3ea;
+  --sys-line: rgba(219, 227, 234, 0.14);
+  --sys-hover: rgba(219, 227, 234, 0.09);
+  --sys-active-bg: #2b7ba9;
+  --sys-active-ink: #ffffff;
+  --sys-muted: #97a4b0;
+  --sys-soft: #c3ccd5;
+}
+
+.fx .sys-brand {
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  font-size: 1.05rem;
+}
+
+.fx .sys-brand span[aria-hidden] {
+  background: #4aa3d6;
+  border-radius: 0.2rem;
+}
+
+.fx .sys-nav button {
+  font-size: 0.8125rem;
+  padding: 0.5rem 0.55rem;
+}
+
+.fx .sys-user {
+  border-top-color: rgba(219, 227, 234, 0.16);
+}
+
+.fx .sys-avatar {
+  background: #2b7ba9;
+  color: #ffffff;
+}
+
+.fx .sys-side .sys-note {
+  color: #8794a0;
+  padding: 0 0.4rem;
+}
+
+.fx .sys-side .sys-user__role {
+  color: #8794a0;
+}
+
+/* área principal */
+
+.fx .sys-top {
+  align-items: flex-end;
+}
+
+.fx .sys-top h1 {
+  letter-spacing: -0.035em;
+}
+
+.fx .sys-card {
+  box-shadow: 0 1px 0 rgba(21, 25, 29, 0.04);
+}
+
+.fx .sys-grid:first-of-type .sys-card {
+  border-top: 2px solid var(--sys-accent);
+}
+
+.fx .sys-metric__value {
+  letter-spacing: -0.045em;
+}
+
+.fx .sys-chart {
+  height: 10rem;
+}
+
+.fx .sys-chart__bar {
+  border-radius: 2px 2px 0 0;
+  opacity: 0.7;
+}
+
+.fx .sys-controls,
+.fx .sys-axis {
+  font-size: 0.5625rem;
+}
+
+/* listas do painel */
+
+.fx-list {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.fx-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px dashed var(--sys-line);
+  font-size: 0.8125rem;
+}
+
+.fx-list li:last-child {
+  border-bottom: 0;
+}
+
+.fx-list b {
+  font-family: var(--demo-mono);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  color: var(--sys-muted);
+}
+
+.fx-team {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.fx-team li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.8125rem;
+}
+
+.fx-team .sys-avatar {
+  width: 1.55rem;
+  height: 1.55rem;
+  font-size: 0.5625rem;
+  background: var(--sys-hover);
+  color: var(--sys-ink);
+  border: 1px solid var(--sys-line);
+}
+
+.fx .kanban__card {
+  background: #ffffff;
+}
+
+.fx .kanban__col {
+  background: #f4f7fa;
+}
+
+.fx .sys-table caption {
+  background: #ffffff;
+}
+
+@media (max-width: 45rem) {
+  .fx .sys-side {
+    position: static;
+    max-height: none;
+  }
+  .fx .sys-nav {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    overflow-x: auto;
+  }
+  .fx .sys-nav button {
+    white-space: nowrap;
+  }
+  .fx .sys-user,
+  .fx .sys-side .sys-note {
+    display: none;
+  }
+  .fx .sys-search {
+    display: none;
+  }
+}

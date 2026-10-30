@@ -1,0 +1,258 @@
+/* Circuito — azul-noite, verde elétrico, sans geométrica e mono. */
+
+:root {
+  --site-bg: #0f1424;
+  --site-ink: #e8ecf7;
+  --site-soft: #b3bcd4;
+  --site-muted: #7e8aa8;
+  --site-line: rgba(232, 236, 247, 0.16);
+  --site-card: #151b2e;
+  --site-art-bg: #121829;
+  --site-accent: #8ad86b;
+  --site-accent-ink: #0b1220;
+  --site-radius: 0.5rem;
+  --site-chip-radius: 999px;
+  --site-display: var(--demo-sans);
+  --site-display-weight: 600;
+  --site-gutter: clamp(1rem, 4vw, 2.5rem);
+  --site-max: 76rem;
+  --site-h1: clamp(2.2rem, 1.1rem + 4.2vw, 4rem);
+  --site-h1-ls: -0.04em;
+  --site-brand-ls: -0.02em;
+  --site-brand-tt: none;
+  --site-error: #e0745f;
+  --site-up: #8ad86b;
+}
+
+.site {
+  background: var(--site-bg);
+}
+
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.cr-mark {
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 3px;
+  background: var(--site-accent);
+  display: inline-block;
+}
+
+.site-head {
+  background: rgba(15, 20, 36, 0.92);
+  backdrop-filter: blur(6px);
+}
+
+.site-h1 em {
+  font-style: normal;
+  color: var(--site-accent);
+}
+
+.site-btn {
+  border-color: var(--site-line);
+}
+
+.site-btn:hover {
+  background: var(--site-ink);
+  border-color: var(--site-ink);
+  color: var(--site-bg);
+}
+
+.site-btn--accent {
+  font-weight: 500;
+}
+
+.site-btn--accent:hover {
+  background: var(--site-ink);
+  border-color: var(--site-ink);
+  color: var(--site-bg);
+}
+
+.site-chip span,
+.site-chip {
+  border-color: var(--site-line);
+}
+
+/* abertura com diagrama */
+
+.cr-hero {
+  align-items: center;
+  padding-block: clamp(1.75rem, 4vw, 3.25rem);
+}
+
+.cr-hero__text {
+  display: grid;
+  gap: 1rem;
+}
+
+.cr-diagram .site-hero__art {
+  background: var(--site-art-bg);
+  border-radius: var(--site-radius);
+  aspect-ratio: 5 / 4;
+  border-color: var(--site-line);
+}
+
+.cr-diagram .site-hero__art svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.cr-disclaimer {
+  margin-top: 0.75rem;
+}
+
+.site-big-number {
+  font-size: clamp(1.2rem, 1rem + 0.9vw, 1.6rem);
+}
+
+/* etapas: sem cartão, com fio superior de acento */
+
+.cr-steps li {
+  border-top: 1px solid var(--site-accent);
+  padding-top: 1rem;
+}
+
+.cr-steps h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.cr-steps .site-mono {
+  color: var(--site-accent);
+}
+
+/* módulos */
+
+.cr-modules {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+}
+
+.cr-modules .site-card {
+  background: var(--site-card);
+  border-radius: var(--site-radius);
+}
+
+.cr-modules .site-card h3 {
+  font-family: var(--site-display);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.cr-modules .site-card p {
+  color: var(--site-soft);
+}
+
+/* segurança: lista com fio */
+
+.site-list strong {
+  font-weight: 500;
+}
+
+/* planos */
+
+.cr-plans {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+}
+
+.cr-plans article {
+  border: 1px solid var(--site-line);
+  border-radius: var(--site-radius);
+  background: var(--site-card);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.cr-plans__main {
+  border-color: var(--site-accent) !important;
+}
+
+.cr-plans h3 {
+  font-family: var(--site-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.cr-price {
+  font-family: var(--site-display);
+  font-size: clamp(1.7rem, 1.3rem + 1.4vw, 2.2rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.cr-price span {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--site-muted);
+  letter-spacing: 0;
+}
+
+.cr-plans ul {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  color: var(--site-soft);
+  margin: 0.3rem 0 0.9rem;
+}
+
+.cr-plans li::before {
+  content: "— ";
+  color: var(--site-accent);
+}
+
+.cr-plans .site-btn {
+  margin-top: auto;
+  justify-content: center;
+}
+
+/* contato */
+
+.cr-contact {
+  display: grid;
+  gap: 1rem;
+  font-size: 0.9688rem;
+  line-height: 1.75;
+  color: var(--site-soft);
+  max-width: 46ch;
+}
+
+.site-field input,
+.site-field select,
+.site-field textarea {
+  background: var(--site-card);
+  border-color: var(--site-line);
+  border-radius: 0.35rem;
+  padding-inline: 0.6rem;
+}
+
+.site-field textarea {
+  border-radius: 0.35rem;
+}
+
+.site-dialog__facts div,
+.site-faq details,
+.site-list li {
+  border-color: var(--site-line);
+}
+
+.site-foot {
+  border-color: var(--site-line);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site * {
+    transition-duration: 0.01ms !important;
+  }
+}

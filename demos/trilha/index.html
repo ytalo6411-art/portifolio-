@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trilha — painel de tarefas e equipes</title>
+<meta name="description" content="Trilha é um painel de tarefas conceitual: quadro por etapa, lista filtrável, carga por pessoa e formulário de nova tarefa. Dados fictícios.">
+<meta name="theme-color" content="#f7f5f0">
+<link rel="stylesheet" href="../_shared/demo.css">
+<link rel="stylesheet" href="../_shared/system.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="sys tr">
+
+<div class="demo-bar">
+  <a href="../../trabalhos.html">← portfólio</a>
+  <span class="dot" aria-hidden="true"></span>
+  <strong>Projeto conceitual</strong>
+  <span class="hint">Trilha · tarefas e equipes</span>
+  <a class="spacer" href="../../index.html">Ytalo</a>
+</div>
+
+<div class="sys-shell">
+  <aside class="sys-side" aria-label="Navegação do painel">
+    <a class="sys-brand" href="#painel">
+      <span aria-hidden="true"></span>
+      Trilha
+    </a>
+
+    <nav class="sys-nav" aria-label="Visões">
+      <button type="button" data-view-link="painel" data-label="Painel" data-sub="Sprint 12 · 8 a 20 de outubro">
+        Painel
+      </button>
+      <button type="button" data-view-link="tarefas" data-label="Tarefas" data-sub="Backlog da sprint">
+        Tarefas <span class="sys-count">18</span>
+      </button>
+      <button type="button" data-view-link="quadro" data-label="Quadro" data-sub="Fluxo por etapa">
+        Quadro <span class="sys-count">4</span>
+      </button>
+      <button type="button" data-view-link="nova" data-label="Nova tarefa" data-sub="Formulário de demonstração">
+        Nova tarefa
+      </button>
+    </nav>
+
+    <div class="sys-user">
+      <span class="sys-avatar" aria-hidden="true">TN</span>
+      <div>
+        <p class="sys-user__name">Tina Nunes</p>
+        <p class="sys-user__role">produto · demo</p>
+      </div>
+    </div>
+
+    <p class="sys-note">Projeto de demonstração. Equipe, prazos e números são inventados para mostrar a interface.</p>
+  </aside>
+
+  <main class="sys-main">
+    <div class="sys-top">
+      <div>
+        <h1 data-view-title>Painel</h1>
+        <p class="sys-top__sub" data-view-sub>Sprint 12 · 8 a 20 de outubro</p>
+      </div>
+      <div class="sys-top__tools">
+        <label class="sys-search">
+          <span class="sys-label">busca</span>
+          <input type="search" placeholder="tarefa, pessoa, etiqueta…" data-table-search aria-label="Buscar tarefa">
+        </label>
+        <button class="sys-btn" type="button" data-view-link="nova" data-label="Nova tarefa" data-sub="Formulário de demonstração">+ tarefa</button>
+      </div>
+    </div>
+
+    <!-- painel -->
+    <section class="sys-view" data-view="painel">
+      <div class="sys-grid">
+        <article class="sys-card">
+          <p class="sys-label">concluídas</p>
+          <p class="sys-metric__value">23</p>
+          <p class="sys-metric__delta" data-dir="up">de 41 na sprint</p>
+        </article>
+        <article class="sys-card">
+          <p class="sys-label">em andamento</p>
+          <p class="sys-metric__value">9</p>
+          <p class="sys-metric__delta" data-dir="up">3 começaram hoje</p>
+        </article>
+        <article class="sys-card">
+          <p class="sys-label">bloqueadas</p>
+          <p class="sys-metric__value">2</p>
+          <p class="sys-metric__delta" data-dir="down">aguardando revisão</p>
+        </article>
+        <article class="sys-card">
+          <p class="sys-label">pontos por pessoa</p>
+          <p class="sys-metric__value">5,2</p>
+          <p class="sys-metric__delta" data-dir="up">média da sprint</p>
+        </article>
+      </div>
+
+      <div class="sys-grid">
+        <article class="sys-card sys-card--wide">
+          <div class="sys-card__head">
+            <h2>Entrega por dia</h2>
+            <span class="sys-label">tarefas concluídas</span>
+          </div>
+          <div class="sys-chart" data-chart data-values="2,3,1,4,3,5,2,1,3,4,6,5" data-labels="8,9,10,11,12,13,14,15,16,17,18,19" data-unit="" role="img" aria-label="Tarefas concluídas por dia da sprint, entre 1 e 6"></div>
+          <div class="sys-axis" data-chart-axis></div>
+        </article>
+      </div>
+
+      <div class="sys-grid">
+        <article class="sys-card">
+          <div class="sys-card__head">
+            <h2>Carga por pessoa</h2>
+            <span class="sys-label">pontos abertos</span>
+          </div>
+          <ul class="tr-load">
+            <li><span>Léo</span><div class="tr-bar"><span style="width:80%"></span></div><b>8</b></li>
+            <li><span>Tina</span><div class="tr-bar"><span style="width:60%"></span></div><b>6</b></li>
+            <li><span>Mari</span><div class="tr-bar"><span style="width:50%"></span></div><b>5</b></li>
+            <li><span>Caio</span><div class="tr-bar"><span style="width:30%"></span></div><b>3</b></li>
+            <li><span>Sara</span><div class="tr-bar"><span style="width:20%"></span></div><b>2</b></li>
+          </ul>
+        </article>
+        <article class="sys-card">
+          <div class="sys-card__head">
+            <h2>Bloqueios</h2>
+            <span class="sys-label">precisa de decisão</span>
+          </div>
+          <ul class="tr-blocks">
+            <li><strong>Revisão de texto</strong><span>aguarda retorno desde 16 out</span></li>
+            <li><strong>Ambiente de teste</strong><span>sem acesso ao banco de dados</span></li>
+          </ul>
+          <p class="sys-note">Na sprint real, cada bloqueio teria dono e data. Aqui é só a demonstração do estado.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- tarefas -->
+    <section class="sys-view" data-view="tarefas" hidden>
+      <div class="sys-toolbar">
+        <button class="sys-chip" type="button" data-status-filter="todos" aria-pressed="true">todas</button>
+        <button class="sys-chip" type="button" data-status-filter="afazer" aria-pressed="false">a fazer</button>
+        <button class="sys-chip" type="button" data-status-filter="andamento" aria-pressed="false">em andamento</button>
+        <button class="sys-chip" type="button" data-status-filter="revisao" aria-pressed="false">revisão</button>
+        <button class="sys-chip" type="button" data-status-filter="feito" aria-pressed="false">concluída</button>
+        <span class="sys-count-label" data-table-count>—</span>
+      </div>
+
+      <div class="sys-table-wrap">
+        <table class="sys-table" data-sortable-table data-filter-table>
+          <caption>Backlog da sprint · dados fictícios; clique no cabeçalho para ordenar</caption>
+          <thead>
+            <tr>
+              <th scope="col" data-sortable="tarefa">tarefa</th>
+              <th scope="col" data-sortable="responsavel">responsável</th>
+              <th scope="col" data-sortable="etiqueta">etiqueta</th>
+              <th scope="col" data-sortable="etapa">etapa</th>
+              <th scope="col" class="num" data-sortable="pontos">pts</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="andamento">
+              <td data-value="Tela de login"><button class="sys-link" type="button" data-drawer-open data-title="Tela de login" data-fact-responsavel="Léo" data-fact-etapa="em andamento" data-fact-pontos="3 pts" data-fact-prazo="18 out" data-state="neutral" data-status-label="em andamento">Tela de login</button></td>
+              <td>Léo</td>
+              <td>front-end</td>
+              <td><span class="sys-badge" data-state="neutral">em andamento</span></td>
+              <td class="num" data-value="3">3</td>
+            </tr>
+            <tr data-status="afazer">
+              <td data-value="Estados de erro"><button class="sys-link" type="button" data-drawer-open data-title="Estados de erro" data-fact-responsavel="Tina" data-fact-etapa="a fazer" data-fact-pontos="2 pts" data-fact-prazo="19 out" data-state="warn" data-status-label="a fazer">Estados de erro</button></td>
+              <td>Tina</td>
+              <td>produto</td>
+              <td><span class="sys-badge" data-state="warn">a fazer</span></td>
+              <td class="num" data-value="2">2</td>
+            </tr>
+            <tr data-status="revisao">
+              <td data-value="Lista de pedidos"><button class="sys-link" type="button" data-drawer-open data-title="Lista de pedidos" data-fact-responsavel="Mari" data-fact-etapa="revisão" data-fact-pontos="5 pts" data-fact-prazo="17 out" data-state="warn" data-status-label="revisão">Lista de pedidos</button></td>
+              <td>Mari</td>
+              <td>feature</td>
+              <td><span class="sys-badge" data-state="warn">revisão</span></td>
+              <td class="num" data-value="5">5</td>
+            </tr>
+            <tr data-status="feito">
+              <td data-value="Componente de tabela"><button class="sys-link" type="button" data-drawer-open data-title="Componente de tabela" data-fact-responsavel="Léo" data-fact-etapa="concluída" data-fact-pontos="3 pts" data-fact-prazo="14 out" data-state="ok" data-status-label="concluída">Componente de tabela</button></td>
+              <td>Léo</td>
+              <td>front-end</td>
+              <td><span class="sys-badge" data-state="ok">concluída</span></td>
+              <td class="num" data-value="3">3</td>
+            </tr>
+            <tr data-status="andamento">
+              <td data-value="Painel de métricas"><button class="sys-link" type="button" data-drawer-open data-title="Painel de métricas" data-fact-responsavel="Caio" data-fact-etapa="em andamento" data-fact-pontos="5 pts" data-fact-prazo="18 out" data-state="neutral" data-status-label="em andamento">Painel de métricas</button></td>
+              <td>Caio</td>
+              <td>dados</td>
+              <td><span class="sys-badge" data-state="neutral">em andamento</span></td>
+              <td class="num" data-value="5">5</td>
+            </tr>
+            <tr data-status="afazer">
+              <td data-value="Texto de ajuda"><button class="sys-link" type="button" data-drawer-open data-title="Texto de ajuda" data-fact-responsavel="Sara" data-fact-etapa="a fazer" data-fact-pontos="1 pt" data-fact-prazo="20 out" data-state="warn" data-status-label="a fazer">Texto de ajuda</button></td>
+              <td>Sara</td>
+              <td>conteúdo</td>
+              <td><span class="sys-badge" data-state="warn">a fazer</span></td>
+              <td class="num" data-value="1">1</td>
+            </tr>
+            <tr data-status="feito">
+              <td data-value="Ícones do sistema"><button class="sys-link" type="button" data-drawer-open data-title="Ícones do sistema" data-fact-responsavel="Mari" data-fact-etapa="concluída" data-fact-pontos="2 pts" data-fact-prazo="13 out" data-state="ok" data-status-label="concluída">Ícones do sistema</button></td>
+              <td>Mari</td>
+              <td>design</td>
+              <td><span class="sys-badge" data-state="ok">concluída</span></td>
+              <td class="num" data-value="2">2</td>
+            </tr>
+            <tr data-status="revisao">
+              <td data-value="Fluxo de convite"><button class="sys-link" type="button" data-drawer-open data-title="Fluxo de convite" data-fact-responsavel="Tina" data-fact-etapa="revisão" data-fact-pontos="3 pts" data-fact-prazo="17 out" data-state="warn" data-status-label="revisão">Fluxo de convite</button></td>
+              <td>Tina</td>
+              <td>produto</td>
+              <td><span class="sys-badge" data-state="warn">revisão</span></td>
+              <td class="num" data-value="3">3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sys-note" data-table-empty hidden>Nenhuma tarefa com esse filtro.</p>
+    </section>
+
+    <!-- quadro -->
+    <section class="sys-view" data-view="quadro" hidden>
+      <div class="kanban">
+        <div class="kanban__col">
+          <h3>a fazer <span>4</span></h3>
+          <button class="kanban__card" type="button" data-drawer-open data-title="Estados de erro" data-fact-responsavel="Tina" data-fact-etapa="a fazer" data-fact-pontos="2 pts" data-state="warn" data-status-label="a fazer">
+            <strong>Estados de erro</strong>
+            <p>produto · 2 pts</p>
+            <div class="kanban__tags"><span class="sys-chip">sprint 12</span></div>
+          </button>
+          <button class="kanban__card" type="button" data-drawer-open data-title="Texto de ajuda" data-fact-responsavel="Sara" data-fact-etapa="a fazer" data-fact-pontos="1 pt" data-state="warn" data-status-label="a fazer">
+            <strong>Texto de ajuda</strong>
+            <p>conteúdo · 1 pt</p>
+            <div class="kanban__tags"><span class="sys-chip">rápido</span></div>
+          </button>
+        </div>
+
+        <div class="kanban__col">
+          <h3>em andamento <span>2</span></h3>
+          <button class="kanban__card" type="button" data-drawer-open data-title="Tela de login" data-fact-responsavel="Léo" data-fact-etapa="em andamento" data-fact-pontos="3 pts" data-state="neutral" data-status-label="em andamento">
+            <strong>Tela de login</strong>
+            <p>front-end · 3 pts</p>
+            <div class="kanban__tags"><span class="sys-chip">acessibilidade</span></div>
+          </button>
+          <button class="kanban__card" type="button" data-drawer-open data-title="Painel de métricas" data-fact-responsavel="Caio" data-fact-etapa="em andamento" data-fact-pontos="5 pts" data-state="neutral" data-status-label="em andamento">
+            <strong>Painel de métricas</strong>
+            <p>dados · 5 pts</p>
+            <div class="kanban__tags"><span class="sys-chip">gráfico</span></div>
+          </button>
+        </div>
+
+        <div class="kanban__col">
+          <h3>revisão <span>2</span></h3>
+          <button class="kanban__card" type="button" data-drawer-open data-title="Lista de pedidos" data-fact-responsavel="Mari" data-fact-etapa="revisão" data-fact-pontos="5 pts" data-state="warn" data-status-label="revisão">
+            <strong>Lista de pedidos</strong>
+            <p>feature · 5 pts</p>
+            <div class="kanban__tags"><span class="sys-chip">aguarda revisão</span></div>
+          </button>
+          <button class="kanban__card" type="button" data-drawer-open data-title="Fluxo de convite" data-fact-responsavel="Tina" data-fact-etapa="revisão" data-fact-pontos="3 pts" data-state="warn" data-status-label="revisão">
+            <strong>Fluxo de convite</strong>
+            <p>produto · 3 pts</p>
+            <div class="kanban__tags"><span class="sys-chip">texto novo</span></div>
+          </button>
+        </div>
+
+        <div class="kanban__col">
+          <h3>concluída <span>23</span></h3>
+          <button class="kanban__card" type="button" data-drawer-open data-title="Componente de tabela" data-fact-responsavel="Léo" data-fact-etapa="concluída" data-fact-pontos="3 pts" data-state="ok" data-status-label="concluída">
+            <strong>Componente de tabela</strong>
+            <p>front-end · 3 pts</p>
+            <div class="kanban__tags"><span class="sys-chip">revisado</span></div>
+          </button>
+          <button class="kanban__card" type="button" data-drawer-open data-title="Ícones do sistema" data-fact-responsavel="Mari" data-fact-etapa="concluída" data-fact-pontos="2 pts" data-state="ok" data-status-label="concluída">
+            <strong>Ícones do sistema</strong>
+            <p>design · 2 pts</p>
+            <div class="kanban__tags"><span class="sys-chip">svg</span></div>
+          </button>
+        </div>
+      </div>
+      <p class="sys-note">Cartões abrem o detalhe ao clique. Nenhuma alteração é salva.</p>
+    </section>
+
+    <!-- nova tarefa -->
+    <section class="sys-view" data-view="nova" hidden>
+      <div class="sys-grid">
+        <article class="sys-card sys-card--wide">
+          <div class="sys-card__head">
+            <h2>Nova tarefa</h2>
+            <span class="sys-label">demonstração</span>
+          </div>
+          <form class="sys-form" data-demo-form data-success="Tarefa criada nesta demonstração. Nada foi salvo.">
+            <div class="sys-form__row">
+              <div class="sys-field">
+                <label for="tr-titulo">título</label>
+                <input id="tr-titulo" name="titulo" required placeholder="Ex.: revisar estados vazios">
+              </div>
+              <div class="sys-field">
+                <label for="tr-pessoa">responsável</label>
+                <select id="tr-pessoa" name="responsavel" required>
+                  <option value="">selecione</option>
+                  <option>Léo</option>
+                  <option>Tina</option>
+                  <option>Mari</option>
+                  <option>Caio</option>
+                  <option>Sara</option>
+                </select>
+              </div>
+            </div>
+            <div class="sys-form__row">
+              <div class="sys-field">
+                <label for="tr-etapa">etapa</label>
+                <select id="tr-etapa" name="etapa" required>
+                  <option value="">selecione</option>
+                  <option>A fazer</option>
+                  <option>Em andamento</option>
+                  <option>Revisão</option>
+                </select>
+              </div>
+              <div class="sys-field">
+                <label for="tr-pontos">pontos</label>
+                <input id="tr-pontos" name="pontos" type="number" min="1" max="13" required placeholder="3">
+              </div>
+            </div>
+            <button class="sys-btn" type="submit">Criar tarefa</button>
+            <p class="sys-form__status" data-form-status role="status" aria-live="polite"></p>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="sys-scrim" data-drawer-scrim data-open="false"></div>
+<aside class="sys-drawer" data-drawer data-open="false" aria-hidden="true" aria-label="Detalhe da tarefa">
+  <div class="sys-drawer__head">
+    <div>
+      <h2 data-drawer-title>Tarefa</h2>
+      <span class="sys-badge" data-drawer-status data-state="neutral">—</span>
+    </div>
+    <button class="sys-drawer__close" type="button" data-drawer-close aria-label="Fechar detalhe">×</button>
+  </div>
+  <div class="sys-drawer__body">
+    <dl class="sys-dl" data-drawer-facts></dl>
+    <p class="sys-note">Tarefa de exemplo. Nada aqui está ligado a um time real.</p>
+  </div>
+</aside>
+
+<script src="../_shared/system.js"></script>
+<script src="../_shared/demo.js"></script>
+</body>
+</html>

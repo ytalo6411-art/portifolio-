@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Produto — Frequência</title>
+<meta name="description" content="Página de produto de Frequência: ficha técnica, tamanhos e sacola. Projeto conceitual.">
+<meta name="theme-color" content="#0c1015">
+<link rel="stylesheet" href="../_shared/shop.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="shop">
+
+<div class="shop-bar">
+  <a href="../../trabalhos.html">← portfólio</a>
+  <span class="shop-bar__dot" aria-hidden="true"></span>
+  <strong>Projeto conceitual</strong>
+  <span class="shop-bar__spacer"></span>
+  <a href="../../index.html">Ytalo</a>
+</div>
+
+<header class="shop-head">
+  <div class="shop-wrap shop-head__inner">
+    <a class="shop-brand" href="index.html">Frequência</a>
+    <nav class="shop-nav" aria-label="Navegação da loja">
+      <a href="loja.html" aria-current="page">Catálogo</a>
+      <a href="loja.html?cat=áudio">Áudio</a>
+      <a href="loja.html?cat=periféricos">Periféricos</a>
+      <a href="loja.html?cat=mobile">Mobile</a>
+    </nav>
+    <div class="shop-head__tools">
+      <button class="shop-menu-btn shop-icon-btn" type="button" data-shop-menu aria-expanded="false" aria-controls="nav-loja">Menu</button>
+      <button class="shop-icon-btn" type="button" data-cart-open>
+        Sacola <span class="shop-cart-count" data-cart-count data-empty="true">0</span>
+      </button>
+    </div>
+  </div>
+  <div class="shop-mobile-nav shop-wrap" id="nav-loja" data-shop-mobile data-open="false">
+    <ul>
+      <li><a href="loja.html">Catálogo</a></li>
+      <li><a href="loja.html?cat=áudio">Áudio</a></li>
+      <li><a href="loja.html?cat=periféricos">Periféricos</a></li>
+      <li><a href="loja.html?cat=mobile">Mobile</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <div class="shop-wrap" data-pdp>
+    <p class="fq-crumb">Catálogo / <span data-p-crumb>categoria</span></p>
+    <div class="shop-pdp">
+      <figure class="shop-pdp__media" data-p-art></figure>
+      <div class="shop-pdp__info">
+        <p class="shop-label" data-p-cat>categoria</p>
+        <h1 class="shop-display" style="font-size:clamp(1.9rem,1.2rem+2.4vw,3rem)" data-p-name>Produto</h1>
+        <p class="shop-pdp__price" data-p-price>R$ 0,00</p>
+        <p class="shop-pdp__desc" data-p-desc></p>
+
+        <div>
+          <p class="shop-label" style="margin-bottom:.5rem">Versão</p>
+          <div class="shop-sizes" data-p-sizes role="group" aria-label="Escolher versão"></div>
+        </div>
+
+        <div class="fq-pdp-actions">
+          <button class="shop-btn shop-btn--solid" type="button" data-p-add>Adicionar à sacola</button>
+          <p class="shop-label">Projeto conceitual · não há venda</p>
+        </div>
+
+        <dl class="shop-specs" data-p-specs></dl>
+        <p class="fq-pdp-note">Garantia de dois anos e devolução em 30 dias são parte do conceito da loja, não de um serviço real.</p>
+      </div>
+    </div>
+
+    <section class="shop-section" aria-labelledby="h-rel">
+      <div class="shop-section__head">
+        <h2 class="shop-h2" id="h-rel">Mesma faixa</h2>
+        <a class="shop-link" href="loja.html">Ver o catálogo inteiro</a>
+      </div>
+      <div class="shop-grid" data-related></div>
+    </section>
+  </div>
+</main>
+
+<footer class="shop-wrap shop-foot">
+  <div>
+    <p class="shop-brand">Frequência</p>
+    <p class="shop-foot__note">Projeto conceitual de e-commerce de eletrônicos. Catálogo, filtros, comparação e sacola funcionam neste navegador; pagamento não existe.</p>
+  </div>
+  <div class="shop-foot__links">
+    <a href="loja.html">Catálogo</a>
+    <a href="../../trabalhos.html">Outros projetos</a>
+    <a href="../../index.html">Portfólio</a>
+  </div>
+</footer>
+
+<div class="shop-scrim" data-cart-scrim data-open="false"></div>
+<aside class="shop-drawer" data-cart-drawer data-open="false" aria-hidden="true" aria-label="Sacola">
+  <div class="shop-drawer__head">
+    <h2>Sacola</h2>
+    <button class="shop-drawer__close" type="button" data-cart-close aria-label="Fechar sacola">✕</button>
+  </div>
+  <div class="shop-drawer__body" data-cart-body></div>
+  <div class="shop-drawer__foot">
+    <p class="shop-drawer__total"><span>Subtotal</span><strong data-cart-total>R$ 0,00</strong></p>
+    <p class="shop-drawer__note">Demonstração: nada é cobrado e nenhum pedido é enviado. A sacola fica guardada neste navegador.</p>
+    <button class="shop-btn shop-btn--solid" type="button" disabled>Finalizar compra (indisponível)</button>
+  </div>
+</aside>
+<div class="shop-toast" data-toast data-open="false" role="status" aria-live="polite"></div>
+
+<script src="../_shared/art.js"></script>
+<script src="data.js"></script>
+<script src="../_shared/shop.js"></script>
+
+</body>
+</html>

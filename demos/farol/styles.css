@@ -1,0 +1,163 @@
+/* Farol — painel financeiro: papel osso, tinta oliva, Fraunces no display. */
+
+.fl {
+  --sys-bg: #f5f3ec;
+  --sys-ink: #1b1d17;
+  --sys-muted: #77776a;
+  --sys-soft: #55564a;
+  --sys-line: rgba(27, 29, 23, 0.14);
+  --sys-card: #fbfaf5;
+  --sys-side-bg: #eeeade;
+  --sys-input-bg: #fbfaf5;
+  --sys-thead-bg: #f2efe4;
+  --sys-accent: #4c5f3a;
+  --sys-accent-ink: #fbfaf5;
+  --sys-accent-strong: #2f3d22;
+  --sys-active-bg: #dfe4cc;
+  --sys-active-ink: #21260f;
+  --sys-hover: #e7e4d6;
+  --sys-up: #3f6b46;
+  --sys-down: #a3453a;
+  --sys-warn: #8c6616;
+  --sys-radius: 0.15rem;
+  --sys-display: "Fraunces", Georgia, serif;
+  --sys-display-weight: 600;
+  --sys-brand-ls: -0.01em;
+}
+
+.fl .sys-side {
+  gap: 0.6rem;
+}
+
+.fl .sys-brand {
+  font-size: 1.15rem;
+}
+
+.fl .sys-brand span[aria-hidden] {
+  border-radius: 50% 50% 50% 0;
+  background: var(--sys-accent);
+}
+
+.fl .sys-nav button {
+  font-size: 0.8125rem;
+  padding: 0.5rem 0.55rem;
+  border-left: 2px solid transparent;
+  border-radius: 0;
+}
+
+.fl .sys-nav [aria-current="page"] {
+  border-left-color: var(--sys-accent);
+  background: transparent;
+  font-weight: 600;
+}
+
+.fl .sys-top h1 {
+  font-size: clamp(1.3rem, 1rem + 0.9vw, 1.75rem);
+}
+
+.fl .sys-card {
+  border-left: 3px solid transparent;
+}
+
+.fl .sys-grid:first-of-type .sys-card:nth-child(1) {
+  border-left-color: var(--sys-accent);
+}
+
+.fl .sys-metric__value {
+  font-size: clamp(1.35rem, 1.1rem + 1.1vw, 1.85rem);
+}
+
+.fl .sys-chart {
+  height: 11rem;
+}
+
+.fl .sys-chart__bar {
+  border-radius: 0;
+  opacity: 0.55;
+}
+
+.fl .sys-chart__bar:nth-child(even) {
+  opacity: 0.4;
+}
+
+.fl .sys-chart__bar[data-emphasis="true"] {
+  opacity: 1;
+}
+
+/* lista de despesas */
+
+.fl-list {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--sys-line);
+}
+
+.fl-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--sys-line);
+  font-size: 0.8125rem;
+}
+
+.fl-list b {
+  font-family: var(--demo-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+
+/* barras de orçamento */
+
+.fl-bar {
+  height: 4px;
+  background: var(--sys-line);
+  margin-top: 0.35rem;
+}
+
+.fl-bar span {
+  display: block;
+  height: 100%;
+  background: var(--sys-accent);
+}
+
+.fl .sys-table tbody tr[data-status="atrasado"] td:first-child {
+  box-shadow: inset 2px 0 0 var(--sys-down);
+}
+
+.fl .sys-search input {
+  width: 10rem;
+}
+
+@media (min-width: 60rem) {
+  .fl .sys-side {
+    position: sticky;
+  }
+}
+
+@media (max-width: 45rem) {
+  .fl .sys-side {
+    position: static;
+    max-height: none;
+    border-right: 0;
+    border-bottom: 1px solid var(--sys-line);
+  }
+  .fl .sys-nav {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    overflow-x: auto;
+  }
+  .fl .sys-nav button {
+    white-space: nowrap;
+  }
+  .fl .sys-user {
+    display: none;
+  }
+  .fl .sys-side .sys-note {
+    display: none;
+  }
+  .fl .sys-search {
+    display: none;
+  }
+}

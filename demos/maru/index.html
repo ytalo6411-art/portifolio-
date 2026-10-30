@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estúdio Maru — arquitetura de casas e escolas</title>
+<meta name="description" content="Estúdio Maru é um site conceitual de arquitetura: projetos residenciais e educacionais, processo em três etapas e contato. Escritório fictício.">
+<meta name="theme-color" content="#e9e6dc">
+<link rel="stylesheet" href="../_shared/demo.css">
+<link rel="stylesheet" href="../_shared/site.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="site">
+
+<div class="demo-bar">
+  <a href="../../trabalhos.html">← portfólio</a>
+  <span class="dot" aria-hidden="true"></span>
+  <strong>Projeto conceitual</strong>
+  <span class="hint">Estúdio Maru · arquitetura</span>
+  <a class="spacer" href="../../index.html">Ytalo</a>
+</div>
+
+<header class="site-head">
+  <div class="site-wrap site-head__inner">
+    <a class="site-brand" href="index.html">Estúdio Maru</a>
+    <nav class="site-nav" aria-label="Navegação principal">
+      <a href="#projetos">Projetos</a>
+      <a href="#atelie">Ateliê</a>
+      <a href="#processo">Processo</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button class="site-menu" type="button" data-menu aria-expanded="false" aria-controls="menu-site">Menu</button>
+    <a class="site-btn site-head__cta" href="#contato">Falar com o ateliê</a>
+  </div>
+  <div class="site-mobile-nav" id="menu-site" data-mobile data-open="false">
+    <div class="site-wrap">
+      <a href="#projetos">Projetos</a>
+      <a href="#atelie">Ateliê</a>
+      <a href="#processo">Processo</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="site-wrap site-hero">
+    <div class="mr-hero__text">
+      <p class="site-label">Arquitetura · Campinas e região</p>
+      <h1 class="site-h1">Casa começa<br>pelo <em>chão</em>.</h1>
+      <p class="site-lede">Projetamos casas e escolas de pequeno porte olhando primeiro para o terreno, o vento e a luz. Depois vem o desenho — nunca antes.</p>
+      <div class="site-row">
+        <a class="site-btn site-btn--solid" href="#projetos">Ver projetos</a>
+        <a class="site-link" href="#processo">Como trabalhamos</a>
+      </div>
+    </div>
+    <figure class="site-hero__media">
+      <div class="site-hero__art" data-hero-art></div>
+      <figcaption class="site-caption">
+        <span>Casa Pátio · 2024 · 148 m²</span>
+        <span>planta baixa, escala 1:200</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <div class="site-wrap">
+    <div class="site-stats">
+      <div class="site-stat"><p class="site-label">Projetos</p><p class="site-big-number">24</p></div>
+      <div class="site-stat"><p class="site-label">Em obra</p><p class="site-big-number">6</p></div>
+      <div class="site-stat"><p class="site-label">Ateliê</p><p class="site-big-number">4</p></div>
+      <div class="site-stat"><p class="site-label">Fundado</p><p class="site-big-number">2017</p></div>
+    </div>
+  </div>
+
+  <section class="site-wrap site-section" id="projetos">
+    <div class="site-section__head">
+      <h2 class="site-h2">Projetos</h2>
+      <p class="site-label">Seis obras · fichas completas</p>
+    </div>
+
+    <div class="site-filters-row" role="group" aria-label="Filtrar projetos">
+      <button class="site-chip" type="button" data-filter="todos" aria-pressed="true">todos</button>
+      <button class="site-chip" type="button" data-filter="residencial" aria-pressed="false">residencial</button>
+      <button class="site-chip" type="button" data-filter="educacional" aria-pressed="false">educacional</button>
+      <button class="site-chip" type="button" data-filter="misto" aria-pressed="false">uso misto</button>
+    </div>
+
+    <div class="site-gallery" data-gallery>
+      <button class="site-tile" type="button" data-type="residencial" data-project="casa-patio">
+        <span class="site-tile__art" data-art="patio"></span>
+        <h3>Casa Pátio</h3>
+        <span class="site-tile__meta"><span>residencial</span><span>148 m²</span></span>
+      </button>
+      <button class="site-tile" type="button" data-type="educacional" data-project="escola-ipe">
+        <span class="site-tile__art" data-art="escola"></span>
+        <h3>Escola Ipê</h3>
+        <span class="site-tile__meta"><span>educacional</span><span>620 m²</span></span>
+      </button>
+      <button class="site-tile" type="button" data-type="misto" data-project="edificio-aurora">
+        <span class="site-tile__art" data-art="aurora"></span>
+        <h3>Edifício Aurora</h3>
+        <span class="site-tile__meta"><span>uso misto</span><span>1.240 m²</span></span>
+      </button>
+      <button class="site-tile" type="button" data-type="residencial" data-project="casa-vao">
+        <span class="site-tile__art" data-art="vao"></span>
+        <h3>Casa Vão</h3>
+        <span class="site-tile__meta"><span>residencial</span><span>96 m²</span></span>
+      </button>
+      <button class="site-tile" type="button" data-type="educacional" data-project="centro-linha">
+        <span class="site-tile__art" data-art="linha"></span>
+        <h3>Centro Linha</h3>
+        <span class="site-tile__meta"><span>educacional</span><span>310 m²</span></span>
+      </button>
+      <button class="site-tile" type="button" data-type="residencial" data-project="casa-bosque">
+        <span class="site-tile__art" data-art="bosque"></span>
+        <h3>Casa Bosque</h3>
+        <span class="site-tile__meta"><span>residencial</span><span>210 m²</span></span>
+      </button>
+    </div>
+  </section>
+
+  <section class="site-wrap site-section" id="atelie">
+    <div class="site-section__head">
+      <h2 class="site-h2">Ateliê</h2>
+      <p class="site-label">Quatro pessoas, uma mesa grande</p>
+    </div>
+    <div class="site-grid-2">
+      <div class="mr-prose">
+        <p>O Maru nasceu em 2017, numa sala emprestada em Barão Geraldo. Hoje somos quatro arquitetos e um estagiário, com obra em Campinas, Valinhos e Atibaia.</p>
+        <p>Não projetamos mais de seis casas por ano. É o número que permite acompanhar a obra de perto, visitar o terreno na chuva e voltar depois da entrega.</p>
+        <p>Trabalhamos com materiais que envelhecem bem: concreto aparente, madeira de reflorestamento, tijolo sem pintura. Nada que precise de manutenção anual.</p>
+      </div>
+      <dl class="site-dialog__facts mr-facts">
+        <div><dt>Sócios</dt><dd>Marina Uchôa e Rafael Tavares</dd></div>
+        <div><dt>Equipe</dt><dd>4 arquitetos · 1 estagiário</dd></div>
+        <div><dt>Escritório</dt><dd>Rua Maria Tereza, 82 — Campinas</dd></div>
+        <div><dt>Foco</dt><dd>residencial unifamiliar · escolas</dd></div>
+        <div><dt>Escopo</dt><dd>do estudo preliminar à obra</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="site-wrap site-section" id="processo">
+    <div class="site-section__head">
+      <h2 class="site-h2">Processo</h2>
+      <p class="site-label">Três etapas, prazos combinados</p>
+    </div>
+    <ol class="site-steps">
+      <li>
+        <span class="site-mono">01 · 2 semanas</span>
+        <h3>Terreno e programa</h3>
+        <p>Visita, levantamento e conversa sobre como você mora. Sai um programa de necessidades em uma página.</p>
+      </li>
+      <li>
+        <span class="site-mono">02 · 6 semanas</span>
+        <h3>Estudo e anteprojeto</h3>
+        <p>Planta, cortes e duas perspectivas. A partir daqui o desenho muda pouco — é onde as decisões ficam caras.</p>
+      </li>
+      <li>
+        <span class="site-mono">03 · 8 semanas</span>
+        <h3>Executivo e obra</h3>
+        <p>Detalhamento, orçamento com fornecedores e acompanhamento semanal até a entrega das chaves.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="site-wrap site-section" id="contato">
+    <div class="site-section__head">
+      <h2 class="site-h2">Contato</h2>
+      <p class="site-label">Resposta em até 3 dias</p>
+    </div>
+    <div class="site-grid-2">
+      <div class="mr-prose">
+        <p>Conte onde é o terreno, o tamanho aproximado e para quando precisa da casa. Se o projeto couber no nosso ritmo, marcamos uma conversa de uma hora — sem custo e sem compromisso.</p>
+        <p class="site-mono">Estúdio fictício: este formulário valida os campos e não envia nada.</p>
+      </div>
+      <form class="site-form" data-demo-form data-success="Campos válidos. Demonstração: nenhuma mensagem foi enviada." novalidate>
+        <div class="site-field">
+          <label for="m-nome">Nome</label>
+          <input id="m-nome" name="nome" type="text" required minlength="2" autocomplete="name">
+        </div>
+        <div class="site-field">
+          <label for="m-email">E-mail</label>
+          <input id="m-email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="site-field">
+          <label for="m-tipo">Tipo de projeto</label>
+          <select id="m-tipo" name="tipo" required>
+            <option value="">Selecione</option>
+            <option>Casa nova</option>
+            <option>Reforma</option>
+            <option>Escola ou espaço educativo</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div class="site-field">
+          <label for="m-msg">Sobre o terreno e o prazo</label>
+          <textarea id="m-msg" name="mensagem" required minlength="20" placeholder="Cidade, metragem aproximada, quando quer começar."></textarea>
+        </div>
+        <p class="site-form__status" data-form-status>Demonstração: o formulário valida e não envia.</p>
+        <button class="site-btn site-btn--solid" type="submit">Enviar mensagem</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-wrap site-foot">
+  <p>Estúdio Maru · projeto conceitual 2026</p>
+  <p>Escritório fictício · nenhuma obra real</p>
+  <p><a href="../../trabalhos.html">Voltar ao portfólio</a></p>
+</footer>
+
+<dialog class="site-dialog" id="projeto-dialog" aria-labelledby="dlg-title">
+  <div class="site-dialog__frame">
+    <div class="site-dialog__head">
+      <div>
+        <p class="site-label" id="dlg-label">Projeto</p>
+        <h2 id="dlg-title">—</h2>
+      </div>
+      <button class="site-dialog__close" type="button" data-dialog-close aria-label="Fechar projeto">✕</button>
+    </div>
+    <div class="site-dialog__body">
+      <div class="site-dialog__art" data-dialog-art></div>
+      <div>
+        <p class="mr-dialog__text" data-dialog-text></p>
+        <dl class="site-dialog__facts" data-dialog-facts></dl>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script src="../_shared/demo.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
